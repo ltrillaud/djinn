@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="accent">
+    <h2>{{title}}</h2>
+    <span class="middle"></span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+       <md-icon>more_vert</md-icon>
+    </button>
+</md-toolbar>
+
+<md-menu #menu="mdMenu" x-position="before">
+  <a routerLink="/sensors" md-menu-item> Sensors </a>
+  <a routerLink="/shutters" md-menu-item> Shutters </a>
+  <a routerLink="/heaters" md-menu-item> Heaters </a>
+  <a routerLink="/t1fos" md-menu-item> T1FO </a>
+</md-menu>
+
+<router-outlet></router-outlet>
