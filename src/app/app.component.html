@@ -1,7 +1,7 @@
 <md-toolbar color="accent">
-    <h2>{{title}}</h2>
-    <span class="middle"></span>
-    <button md-icon-button [md-menu-trigger-for]="menu">
+  <h2>{{title}}</h2>
+  <span class="middle"></span>
+  <button md-icon-button [md-menu-trigger-for]="menu">
        <md-icon>more_vert</md-icon>
     </button>
 </md-toolbar>
@@ -13,4 +13,6 @@
   <a routerLink="/t1fos" md-menu-item> T1FO </a>
 </md-menu>
 
-<router-outlet></router-outlet>
+<form class="cmxform sensors">
+  <router-outlet></router-outlet>
+</form>

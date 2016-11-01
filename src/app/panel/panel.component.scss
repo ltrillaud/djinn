@@ -1,135 +1,122 @@
+$pm1: #E6A117;
+$pm2: #9A7B3D;
+$pm3: #7B5404;
+$pm4: #F6C562;
+$pm5: #F6D89C;
+$sa1: #E6BD17;
+$sa2: #9A873D;
+$sa3: #7B6404;
+$sa4: #F6D962;
+$sa5: #F6E59C;
+$sb1: #E67E17;
+$sb2: #9A6B3D;
+$sb3: #7B3F04;
+$sb4: #F6AC62;
+$sb5: #F6C99C;
+$cp1: #1E439A;
+$cp2: #2F4067;
+$cp3: #051D53;
+$cp4: #658ADD;
+$cp5: #94AADD;
+$text: $pm3;
+$alert: #D34D17;
 
-
-.cmxform {
-	width: auto;
-	font-size: 1.0em;
-
-	fieldset {
-		margin: 1em;
-		border: none;
-		border-radius: 10px 10px 10px 10px;
-		box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
-		margin-bottom: 18px;
-		padding: 1em 1em 1em 1em;
-		background: url(/css/images/ui-bg_glow-ball_100_f6d89c_600x600.png) 50% 35% repeat-x;
-		background-color: $pm5;
-		color: $pm3;
-
-		&.float {
-			float: left;
-			margin-right: 2em;
-		}
-
-		p > label:first-child {
-			display: inline-block;
-			width: 10em;
-			text-align: right;
-		}
-
-		p {
-			list-style: none;
-			margin: 0.4em 0 0 0;
-			color: $pm3;
-		}
-
-		p.float {
-			float: left;
-			margin-right: 1em;
-		}
-
-		p.sep {
-			clear: both;
-			margin-top: 0.8em;
-			padding-top: 0.5em;
-			background: url(/css/images/cmxform-divider.gif) left top repeat-x;
-		}
-
-		select {
-			width: 25em;
-		}
-
-		input {
-			font-size: 100%;
-		}
-		input#login {
-			background: url(/images/icons/24/user.png) no-repeat scroll white;
-			padding-left:28px;
-		}
-		input#barcode {
-			background: url(/images/icons/24/barcode_scanner.png) no-repeat scroll white;
-			padding-left:28px;
-		}
+fieldset {
+	border: none;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+	margin-bottom: 18px;
+	padding: 1em;
+	background: url("/css/images/ui-bg_glow-ball_100_f6d89c_600x600.png") 50% 35% repeat-x;
+	background-color: $pm5;
+	color: $pm3;
+	width: 270px;
+	height: 200px;
+	background-size: cover;
 }
 
-	legend {
-		position: relative;
-		top: 0.6em;
-		width: 100%;
-		padding: 0 2px;
-		font-weight: bold;
-		font-size: 1.2em;
-		text-align: center;
-		color: $sa5;
-		background: -webkit-linear-gradient(left, rgba(123,63,4,0) 0%, rgba(123,63,4,0.66) 33%, rgba(123,63,4,1) 50%, rgba(123,63,4,0.68) 66%, rgba(123,63,4,0) 100%);}
+legend {
+	position: relative;
+	top: 0.6em;
+	width: 100%;
+	padding: 0 2px;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	color: $sa5;
+	background: -webkit-linear-gradient(left, rgba(123,63,4,0) 0%, rgba(123,63,4,0.66) 33%, rgba(123,63,4,1) 50%, rgba(123,63,4,0.68) 66%, rgba(123,63,4,0) 100%);
+}
 
-	label {
-		display: inline;
-		line-height: 1.4;
-		vertical-align: top;
-		cursor: hand;
-		width: 100px;
-		font-size: 0.9em;
+input {
+	display: block;
+	position: relative;
+	bottom: -4.3em;
 
-		&.error {
-			margin-left: 1em;
-			width: 220px;
-			color: red;
-			font-style: italic
-		}
+	&.hum {
+		right: 3.4em;
+		float: right;
 	}
 
-
-	input.submit {
-		margin-left: 103px;
+	&.temp {
+		right: -5em;
 	}
 
-	div.error {
-		display: none;
+	&.t1fo.big {
+		right: -2em;
 	}
 
-	input.checkbox {
-		border: none
+	&.t1fo.small {
+		right: -4em;
 	}
 
-	.gray * {
-		color: gray;
+	&.heater {
+		right: 4em;
+		float: right;
 	}
 
-	a#submit {
-		margin-right: 0.2em;
-		margin-top: 0.05em;
-	    padding: 4px 10px 4px 25px;
-	    border: solid 1px #8AB134;
-	    position: relative;
-	    cursor: pointer;
-	    display: inline-block;
-	    background-image: url( '/images/submit-bg.png' );
-	    background-repeat: repeat-x;
-	    font-size: 13px;
-	    height: 16px;
-	    text-decoration: none;
-	    color: #40740D;
-	    float: right;
-	    border-radius: 0.5em;
+	&#G1P-temp {
+		right: 5em;
+		top: 0.3em;
+		float: right;
+	}
 
-		img {
-		    position: absolute;
-		    top: -4px;
-		    left: -12px;
-		    border: none;
-		}
-		&:hover {
-		    color: #8AB134;
-		}
+	&#G1T-temp {
+		right: -5em;
+		top: 0.3em;
+	}
+
+	&#G1E-temp {
+		right: 5em;
+		top: 3.2em;
+		float: right;
+	}
+
+	&#G1I-temp {
+		right: -5em;
+		top: 3.2em;
+	}
+}
+
+img {
+	display: block;
+	position: relative;
+	bottom: -3.5em;
+	right: -8.5em;
+	cursor: pointer;
+}
+
+input {
+	color: black;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%,#d5cea6), color-stop(40%,#c9c190), color-stop(100%,#b7ad70) );
+	text-align: right;
+	font-family: digit;
+	font-size: 2em;
+	padding: 0 0.2em;
+	border: none;
+	text-shadow: 2px 2px 10px gray;
+	outline: 4px inset #D5CEA6;
+
+	&:focus {
+		outline-offset: 0;
 	}
 }

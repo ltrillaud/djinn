@@ -1,3 +1,3 @@
-<p>
-  heaters works!
-</p>
+<div *ngFor="let appliance of applianceService.appliances.heaters">
+    <app-panel [appliance]="appliance"></app-panel>
+</div>

@@ -1,2 +1,3 @@
-<app-panel *ngFor="let appliance of appliances">
-</app-panel>
+<div *ngFor="let appliance of applianceService.appliances.shutters">
+    <app-panel [appliance]="appliance"></app-panel>
+</div>

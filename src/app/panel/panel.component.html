@@ -1,7 +1,8 @@
-
-<p>{{appliance.title}}</p>
-
-	<fieldset id="{{appliance.title}}">
-		<legend>{{appliance.title}}</legend>
-		<input class="digit temp" id="X1-temp" name="X1-temp" size="4" disabled="disabled"/>
-	</fieldset>
+<fieldset id="{{appliance.title}}"
+[ngStyle]="{'background-image': 'url(/assets/house/'+appliance.id+'.png)'}">
+	<legend>{{appliance.title}}</legend>
+	<input *ngFor="let measure of appliance.measures"
+	[class]="measure.type"
+	id="{{measure.code}}-{{measure.type}}"
+	size="4" disabled="disabled" />
+</fieldset>
