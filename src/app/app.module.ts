@@ -10,6 +10,7 @@ import { SensorsComponent } from './sensors/sensors.component';
 import { ShuttersComponent } from './shutters/shutters.component';
 import { HeatersComponent } from './heaters/heaters.component';
 import { T1fosComponent } from './t1fos/t1fos.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { T1fosComponent } from './t1fos/t1fos.component';
     SensorsComponent,
     ShuttersComponent,
     HeatersComponent,
-    T1fosComponent
+    T1fosComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
