@@ -4,7 +4,7 @@ import { ApplianceService } from '../appliance.service';
 @Component({
   selector: 'app-sensors',
   templateUrl: './sensors.component.html',
-  styleUrls: ['./sensors.component.css'],
+  styleUrls: ['./sensors.component.scss'],
   providers: [ApplianceService]
 })
 export class SensorsComponent implements OnInit {
