@@ -5,4 +5,5 @@
 	[class]="measure.type"
 	id="{{measure.code}}-{{measure.type}}"
 	size="4" disabled="disabled" />
+	<img *ngIf="appliance.action" [class]="appliance.action" [src]="'/assets/'+appliance.action+'.png'"/>
 </fieldset>
