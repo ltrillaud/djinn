@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+// @import '../../djinn.scss';
+
+#holder {
+  overflow-y: auto;
+}
+
+.mat-card {
+  min-width: 300px;
+}
+
+.right {
+  $size: 36px;
+
+  font-size: $size;
+  line-height: $size;
+  font-family: 'Digit';
+  // color: mat.get-color-from-palette($djinn-primary, 500);
+
+  .mat-icon {
+    height: $size;
+    width: $size;
+    font-size: $size;
+  }
+}
+
+::ng-deep .mat-card-header-text {
+  margin: 0 12px 0 0 !important;
+}

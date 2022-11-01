@@ -1,0 +1,35 @@
+#holder {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  background-position: top left, bottom right, center center;
+  background-repeat: no-repeat;
+  background-image: url('/assets/background/cloud-top-left.png'), url('/assets/background/cloud-bottom-right.png'),
+    url('/assets/background/cloud-center-center.png');
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+#work-area {
+  margin: 16px;
+  overflow-y: auto;
+}
+
+#menu {
+  margin-right: 16px;
+}
+
+#at {
+  font-size: xx-large;
+  margin: 0 6px;
+}
+
+#djinn {
+  position: absolute;
+  $offset: 16px;
+  right: $offset;
+  bottom: $offset;
+}

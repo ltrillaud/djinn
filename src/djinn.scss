@@ -3,13 +3,6 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-@import '~@angular/material/theming';
-
 $mat-everial-dark-blue: (
   50: #e0e5e8,
   100: #b3bec7,
@@ -426,18 +419,6 @@ $djinn-dark-theme-background: (
   tooltip: map_get($mat-everial-dark-blue, 700),
 );
 
-// instead of creating a theme with mat-light-theme like a sane person, we will create our own theme-creating function that lets us apply our own foreground and background palettes.
-@function create-color-theme($primary, $accent, $warn) {
-  @return (
-    primary: $primary,
-    accent: $accent,
-    warn: $warn,
-    is-dark: true,
-    foreground: $djinn-dark-theme-foreground,
-    background: $djinn-dark-theme-background
-  );
-}
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -453,35 +434,3 @@ $djinn-color-theme: create-color-theme($djinn-primary, $djinn-accent, $djinn-war
 $djinn-typo-theme: mat.define-typography-config(
   $font-family: 'Poppins',
 );
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-// @include mat.all-component-themes($djinn-theme);
-@include mat.all-component-themes(
-  (
-    color: $djinn-color-theme,
-    typography: $djinn-typo-theme,
-  )
-);
-
-/* You can add global styles to this file, and also import other style files */
-
-@font-face {
-  font-family: 'Digit';
-  src: url(/assets/fonts/digit.ttf);
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-.debug {
-  border: 1px solid red;
-}
-
-.material-icons {
-  font-family: 'Material Icons Outlined';
-}
