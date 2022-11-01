@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-// @import '../../djinn.scss';
+@import '../../djinn';
 
 #holder {
   overflow-y: auto;
@@ -16,7 +16,7 @@
   font-size: $size;
   line-height: $size;
   font-family: 'Digit';
-  // color: mat.get-color-from-palette($djinn-primary, 500);
+  color: mat.get-color-from-palette($djinn-primary, 500);
 
   .mat-icon {
     height: $size;

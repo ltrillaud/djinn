@@ -370,14 +370,14 @@ $mat-semantic-blue: (
 );
 
 // basic colors
-$djinn-white: map-get($mat-everial-light-blue, 50);
-$djinn-black: map-get($mat-everial-dark-blue, 900);
+$djinn-white: mat.get-color-from-palette($mat-everial-light-blue, 50);
+$djinn-black: mat.get-color-from-palette($mat-everial-dark-blue, 900);
 
 // change dark foreground palette
-$dark-foreground-color-base: map-get($mat-everial-light-blue, 50);
-$light-dividers: map-get($mat-everial-light-blue, 200);
-$light-disabled-text: map-get($mat-everial-light-blue, 300);
-$light-secondary-text: map-get($mat-everial-light-blue, 400);
+$dark-foreground-color-base: mat.get-color-from-palette($mat-everial-light-blue, 50);
+$light-dividers: mat.get-color-from-palette($mat-everial-light-blue, 200);
+$light-disabled-text: mat.get-color-from-palette($mat-everial-light-blue, 300);
+$light-secondary-text: mat.get-color-from-palette($mat-everial-light-blue, 400);
 
 $djinn-dark-theme-foreground: (
   base: $dark-foreground-color-base,
@@ -397,34 +397,46 @@ $djinn-dark-theme-foreground: (
   slider-off-active: rgba($dark-foreground-color-base, 0.3),
 );
 
-$light-focused: map-get($mat-semantic-orange, 400);
+$light-focused: mat.get-color-from-palette($mat-semantic-orange, 400);
 
 // change dark background palette
-$dark-background-color-base: map-get($mat-everial-dark-blue, 800);
+$dark-background-color-base: mat.get-color-from-palette($mat-everial-dark-blue, 800);
 $djinn-dark-theme-background: (
   status-bar: $djinn-black,
-  app-bar: map_get($mat-everial-dark-blue, 800),
-  background: map_get($mat-everial-dark-blue, 900),
+  app-bar: mat.get-color-from-palette($mat-everial-dark-blue, 800),
+  background: mat.get-color-from-palette($mat-everial-dark-blue, 900),
   hover: rgba($djinn-white, 0.04),
-  card: map-get($mat-everial-dark-blue, 700),
-  dialog: map_get($mat-everial-dark-blue, 700),
+  card: mat.get-color-from-palette($mat-everial-dark-blue, 700),
+  dialog: mat.get-color-from-palette($mat-everial-dark-blue, 700),
   disabled-button: rgba($djinn-white, 0.12),
-  raised-button: map-get($mat-everial-dark-blue, 700),
+  raised-button: mat.get-color-from-palette($mat-everial-dark-blue, 700),
   focused-button: $light-focused,
-  selected-button: map_get($mat-everial-dark-blue, 800),
-  selected-disabled-button: map_get($mat-everial-dark-blue, 700),
+  selected-button: mat.get-color-from-palette($mat-everial-dark-blue, 800),
+  selected-disabled-button: mat.get-color-from-palette($mat-everial-dark-blue, 700),
   disabled-button-toggle: $djinn-black,
-  unselected-chip: map_get($mat-everial-dark-blue, 600),
+  unselected-chip: mat.get-color-from-palette($mat-everial-dark-blue, 600),
   disabled-list-option: $djinn-black,
-  tooltip: map_get($mat-everial-dark-blue, 700),
+  tooltip: mat.get-color-from-palette($mat-everial-dark-blue, 700),
 );
+
+// instead of creating a theme with mat-light-theme like a sane person, we will create our own theme-creating function that lets us apply our own foreground and background palettes.
+@function create-color-theme($primary, $accent, $warn) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: true,
+    foreground: $djinn-dark-theme-foreground,
+    background: $djinn-dark-theme-background
+  );
+}
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$djinn-primary: mat-palette($mat-everial-purple);
-$djinn-accent: mat-palette($mat-everial-light-blue);
-$djinn-warn: mat-palette($mat-everial-red);
+$djinn-primary: mat.define-palette($mat-everial-purple);
+$djinn-accent: mat.define-palette($mat-everial-light-blue);
+$djinn-warn: mat.define-palette($mat-everial-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -433,4 +445,15 @@ $djinn-color-theme: create-color-theme($djinn-primary, $djinn-accent, $djinn-war
 // Specify "Poppins" as the default font family for all levels.
 $djinn-typo-theme: mat.define-typography-config(
   $font-family: 'Poppins',
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($djinn-theme);
+@include mat.all-component-themes(
+  (
+    color: $djinn-color-theme,
+    typography: $djinn-typo-theme,
+  )
 );
