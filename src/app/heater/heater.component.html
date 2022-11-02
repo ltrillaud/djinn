@@ -10,24 +10,28 @@
         </div>
         <div fxFlex></div>
         <div class="right" fxLayout="row" fxFlexAlign="center center">
-          <mat-icon color="primary">thermostat</mat-icon>
+          <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
           <div>21.2</div>
         </div>
       </div>
 
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="space-between center">
-      <button mat-icon-button color="accent">
-        <mat-icon>light_mode</mat-icon>
+      <button mat-icon-button [color]="heater.mode === 'C' ? 'primary' : 'accent'"
+        (click)="onChange(heater.key, 'C')">
+        <mat-icon fontSet="material-symbols-outlined">light_mode</mat-icon>
       </button>
-      <button mat-icon-button color="accent">
-        <mat-icon>brightness_6</mat-icon>
+      <button mat-icon-button [color]="heater.mode === '1' ? 'primary' : 'accent'"
+        (click)="onChange(heater.key, '1')">
+        <mat-icon fontSet="material-symbols-outlined">brightness_6</mat-icon>
       </button>
-      <button mat-icon-button color="accent">
-        <mat-icon>brightness_4</mat-icon>
+      <button mat-icon-button [color]="heater.mode === '2' ? 'primary' : 'accent'"
+        (click)="onChange(heater.key, '2')">
+        <mat-icon fontSet="material-symbols-outlined">brightness_4</mat-icon>
       </button>
-      <button mat-icon-button color="accent">
-        <mat-icon>dark_mode</mat-icon>
+      <button mat-icon-button [color]="heater.mode === 'E' ? 'primary' : 'accent'"
+        (click)="onChange(heater.key, 'E')">
+        <mat-icon fontSet="material-symbols-outlined">mode_night</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>

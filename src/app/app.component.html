@@ -1,7 +1,7 @@
 <div id="holder" fxLayout="column" fxFlexFill class="cloud">
   <mat-toolbar class="mat-elevation-z4">
-    <button id="menu" mat-icon-button class="example-icon" color="accent" aria-label="Main menu">
-      <mat-icon>menu</mat-icon>
+    <button id="menu" mat-icon-button [matMenuTriggerFor]="menu" color="accent" aria-label="Main menu">
+      <mat-icon fontSet="material-symbols-outlined">menu</mat-icon>
     </button>
     <span>djinn</span>
     <span id="at" color="accent">@</span>
@@ -13,3 +13,31 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">home</mat-icon>
+    <span>Accueil</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">thermostat</mat-icon>
+    <span>Temperature</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">blinds</mat-icon>
+    <span>Volet Roulant</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">nest_true_radiant</mat-icon>
+    <span>Chauffage</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">edit_calendar</mat-icon>
+    <span>Programmation</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontSet="material-symbols-outlined" color="accent">cable</mat-icon>
+    <span>Linky</span>
+  </button>
+
+</mat-menu>
