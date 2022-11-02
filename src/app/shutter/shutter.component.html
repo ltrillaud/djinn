@@ -1,1 +1,26 @@
-<p>shutter works!</p>
+<div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
+
+  <mat-card *ngFor="let shutter of shutters" class="mat-elevation-z3">
+    <mat-card-header>
+      <img mat-card-avatar [src]="'/assets/house/'+shutter.key+'.png'">
+      <div fxFlex class="mat-card-title">
+        <div class="left" fxLayout="column">
+          <div>{{shutter.label}}</div>
+        </div>
+        <div fxFlex></div>
+        <div class="right" fxLayout="row" fxFlexAlign="center center">
+          <button mat-icon-button color="accent"
+            (click)="onChange(shutter.key, 'O')">
+            <mat-icon fontSet="material-symbols-outlined">expand_less</mat-icon>
+          </button><button mat-icon-button color="accent"
+            (click)="onChange(shutter.key, 'C')">
+            <mat-icon fontSet="material-symbols-outlined">expand_more</mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </mat-card-header>
+
+  </mat-card>
+
+</div>
