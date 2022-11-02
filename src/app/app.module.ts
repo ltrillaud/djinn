@@ -12,13 +12,21 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HomeComponent } from './home/home.component'
-import { HeaterComponent } from './heater/heater.component'
+import { HeaterComponent } from './heater/heater.component';
+import { TemperatureComponent } from './temperature/temperature.component';
+import { ShutterComponent } from './shutter/shutter.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { LinkyComponent } from './linky/linky.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaterComponent
+    HeaterComponent,
+    TemperatureComponent,
+    ShutterComponent,
+    CalendarComponent,
+    LinkyComponent
   ],
   imports: [
     AppRoutingModule,
