@@ -6,11 +6,40 @@
   overflow-y: auto;
 }
 
-.mat .mat-list-item {
+.mat-list {
+  max-width: 300px;
   min-width: 300px;
 }
 
-.h2 {
+.mat-list-item {
+  background-color: mat.get-color-from-palette($djinn-default, 700);
+  margin: 8px 4px;
+
+  &.mat-2-line {
+    height: 96px !important;
+  }
+}
+
+::ng-deep .mat-list-text {
+  padding-left: 0 !important;
+}
+
+.right {
+  $size: 32px;
+
+  font-size: $size;
+  line-height: $size;
+  font-family: 'Digit';
+  color: mat.get-color-from-palette($djinn-primary, 500);
+  padding-right: 4px;
+
+  .mat-icon {
+    height: $size;
+    width: $size;
+    font-size: $size;
+  }
+}
+h2 {
   color: mat.get-color-from-palette($djinn-primary, 500);
 }
 

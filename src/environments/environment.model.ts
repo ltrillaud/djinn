@@ -1,4 +1,4 @@
-import { Appliance } from "src/app/appliances.service"
+import { Appliance, Appliances } from "src/app/appliances.service"
 
 export interface Menu {
   label: string
@@ -10,7 +10,7 @@ export interface Environment {
   production: boolean
   owServerHost: string
   mainMenus: Menu[]
-  appliances: Appliance[]
+  appliances: Appliances
 }
 
 export const defaultEnvironment: Environment = {
@@ -24,5 +24,15 @@ export const defaultEnvironment: Environment = {
     { label: 'Programmation', icon: 'edit_calendar', page: 'calendar' },
     { label: 'Linky', icon: 'cable', page: 'linky' },
   ],
-  appliances: [],
+  appliances: {
+    J1P: { isFavorite: false, label: { line1: 'Séjour', line2: '' } },
+    C1P: { isFavorite: false, label: { line1: 'Cuisine', line2: '' } },
+    U1: { isFavorite: false, label: { line1: 'Bureau', line2: '' } },
+    M1: { isFavorite: false, label: { line1: 'Chambre', line2: 'Maureen' } },
+    A1: { isFavorite: false, label: { line1: 'Chambre', line2: 'Amandine' } },
+    B1: { isFavorite: false, label: { line1: 'Buanderie', line2: '' } },
+    X1: { isFavorite: false, label: { line1: 'Extérieur', line2: '' } },
+    R1: { isFavorite: false, label: { line1: 'Salle de', line2: 'Bain Bas' } },
+    H1: { isFavorite: false, label: { line1: 'Salle de', line2: 'Bain Haut' } },
+  },
 }

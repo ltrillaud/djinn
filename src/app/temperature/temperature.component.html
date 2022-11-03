@@ -5,17 +5,21 @@
   <h2>Individuel</h2>
 
   <mat-list>
-    <mat-list-item *ngFor="let temperature of temperatures" class="mat-elevation-z2">
+    <mat-list-item *ngFor="let appliance of appliances | keyvalue" class="mat-elevation-z2">
 
-      <img matListAvatar [src]="'/assets/house/'+temperature.key+'.png'">
+      <img matListAvatar [src]="'/assets/house/'+appliance.key+'.png'">
 
-      <button mat-icon-button color="accent">
-        <mat-icon fontSet="material-symbols-outlined">heart_plus</mat-icon>
+      <button mat-icon-button
+        [color]="appliance.value.isFavorite ? 'primary' : 'accent'"
+        (click)="onFavorite(appliance.key)">
+        <mat-icon fontSet="material-symbols-outlined">
+          {{appliance.value.isFavorite ? 'heart_minus' : 'heart_plus'}}
+        </mat-icon>
       </button>
       <div fxFlex>
         <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
-          <div>{{temperature.label.line1}}</div>
-          <div>{{temperature.label.line2}}</div>
+          <div>{{appliance.value.label.line1}}</div>
+          <div>{{appliance.value.label.line2}}</div>
         </div>
         <div fxFlex></div>
         <div class="right" fxLayout="row" fxFlexAlign="center center">
