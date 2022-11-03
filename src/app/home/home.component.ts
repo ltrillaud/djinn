@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  mainMenus = environment.mainMenus.filter(menu => menu.page !== 'home')
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onGoto(page: string) {
+    this.router.navigate([page])
   }
 
 }

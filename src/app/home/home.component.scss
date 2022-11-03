@@ -1,3 +1,19 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import '../../djinn';
+
+#holder {
+  overflow-y: auto;
+}
+
+.mat .mat-list-item {
+  min-width: 300px;
+}
+
+.h2 {
+  color: mat.get-color-from-palette($djinn-primary, 500);
+}
+
 #djinn {
   position: absolute;
   $offset: 16px;

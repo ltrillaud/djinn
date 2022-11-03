@@ -41,4 +41,6 @@ export class HeaterComponent implements OnInit {
     const heater = this.heaters.find(heater => heater.key === key)
     heater!.mode = mode
   }
+
+  onFavorite(label: string) { }
 }

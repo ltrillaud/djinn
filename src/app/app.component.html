@@ -17,8 +17,8 @@
 </div>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item *ngFor="let menu of menus" (click)="onGoto(menu.page)">
-    <mat-icon fontSet="material-symbols-outlined" color="accent" [fontIcon]="menu.icon"></mat-icon>
+  <button mat-menu-item *ngFor="let menu of mainMenus" (click)="onGoto(menu.page)">
+    <mat-icon fontSet="material-symbols-outlined" color="accent">{{menu.icon}}</mat-icon>
     <span>{{menu.label}}</span>
   </button>
 </mat-menu>

@@ -6,8 +6,17 @@
   overflow-y: auto;
 }
 
-.mat-card {
-  min-width: 300px;
+.mat-list {
+  max-width: 300px;
+}
+
+.mat-list-item {
+  background-color: mat.get-color-from-palette($djinn-default, 700);
+  margin: 8px 4px;
+}
+
+h2 {
+  color: mat.get-color-from-palette($djinn-primary, 500);
 }
 
 .right {
@@ -25,6 +34,9 @@
   }
 }
 
+.label {
+  vertical-align: middle;
+}
 ::ng-deep .mat-card-header-text {
   margin: 0 12px 0 0 !important;
 }

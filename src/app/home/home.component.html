@@ -1,1 +1,13 @@
+<div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
+
+  <h2> Favoris</h2>
+
+  <h2> Menu</h2>
+
+  <button mat-menu-item *ngFor="let menu of mainMenus" (click)="onGoto(menu.page)">
+    <mat-icon fontSet="material-symbols-outlined" color="accent">{{menu.icon}}</mat-icon>
+    <span>{{menu.label}}</span>
+  </button>
+</div>
+
 <img id="djinn" src="/assets/djinn.png">

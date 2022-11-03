@@ -434,6 +434,7 @@ $djinn-dark-theme-background: (
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
+$djinn-default: mat.define-palette($mat-everial-dark-blue);
 $djinn-primary: mat.define-palette($mat-everial-purple);
 $djinn-accent: mat.define-palette($mat-everial-light-blue);
 $djinn-warn: mat.define-palette($mat-everial-red);

@@ -7,8 +7,12 @@ type ShutterType = 'PR' | 'AR' | 'JRS' | 'JRE' | 'JRP' | 'UR' | 'SR' | 'MR' | 'C
 type ModeType = 'O' | 'C'
 
 interface Shutter {
-  key: ShutterType
   label: string
+}
+
+interface Group {
+  label: string
+  shutters: ShutterType[]
 }
 
 @Component({
@@ -17,24 +21,44 @@ interface Shutter {
   styleUrls: ['./shutter.component.scss']
 })
 export class ShutterComponent {
-  shutters: Shutter[] = [
-    { key: 'UR', label: 'Bureau' },
-    { key: 'CR', label: 'Cuisine' },
-    { key: 'JRP', label: 'Séjour Porte' },
-    { key: 'JRS', label: 'Séjour Sud' },
-    { key: 'JRE', label: 'Séjour Est' },
-    { key: 'SR', label: 'Salon' },
-    { key: 'PR', label: 'Chambre Parentale' },
-    { key: 'MR', label: 'Chambre Maureen' },
-    { key: 'AR', label: 'Chambre Amandine' },
+  shutters: { [key in ShutterType]: Shutter } = {
+    UR: { label: 'Bureau' },
+    CR: { label: 'Cuisine' },
+    SR: { label: 'Salon' },
+    JRP: { label: 'Séjour Porte' },
+    JRS: { label: 'Séjour Sud' },
+    JRE: { label: 'Séjour Est' },
+    PR: { label: 'Chambre Parentale' },
+    MR: { label: 'Chambre Maureen' },
+    AR: { label: 'Chambre Amandine' },
+  }
+
+  groups: Group[] = [
+    { label: 'Boulot', shutters: ['UR', 'SR', 'CR'] },
+    { label: 'Réveil', shutters: ['JRP', 'JRS', 'JRE', 'PR'] },
+    { label: 'Étage', shutters: ['AR', 'MR'] },
   ]
+
+
   constructor(
     private httpClient: HttpClient,
   ) { }
 
-  async onChange(shutter: ShutterType, mode: ModeType) {
+  async onChange(shutter: string, mode: ModeType) {
     const url = `${environment.owServerHost}/apl/${shutter}`
     const response = await lastValueFrom(this.httpClient.put(url, { value: mode }))
   }
 
+  async onGroup(label: string, mode: ModeType) {
+    const group = this.groups.find(group => group.label === label)
+    for (const shutter of group!.shutters) {
+      const url = `${environment.owServerHost}/apl/${shutter}`
+      await lastValueFrom(this.httpClient.put(url, { value: mode }))
+    }
+  }
+
+  onFavorite(label: string) {
+
+  }
+  unsorted(): number { return 0 }
 }

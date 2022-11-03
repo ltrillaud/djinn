@@ -1,26 +1,52 @@
-<div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
+<div id="holder" fxLayout="column" fxFlexFill fxLayoutGap="16px">
 
-  <mat-card *ngFor="let shutter of shutters" class="mat-elevation-z3">
-    <mat-card-header>
-      <img mat-card-avatar [src]="'/assets/house/'+shutter.key+'.png'">
-      <div fxFlex class="mat-card-title">
-        <div class="left" fxLayout="column">
-          <div>{{shutter.label}}</div>
-        </div>
-        <div fxFlex></div>
-        <div class="right" fxLayout="row" fxFlexAlign="center center">
-          <button mat-icon-button color="accent"
-            (click)="onChange(shutter.key, 'O')">
-            <mat-icon fontSet="material-symbols-outlined">expand_less</mat-icon>
-          </button><button mat-icon-button color="accent"
-            (click)="onChange(shutter.key, 'C')">
-            <mat-icon fontSet="material-symbols-outlined">expand_more</mat-icon>
-          </button>
-        </div>
+  <h2> Groupes</h2>
+
+  <mat-list>
+    <mat-list-item *ngFor="let group of groups"
+      class="mat-elevation-z2">
+      <img matListAvatar [src]="'/assets/house/all.png'">
+      <button mat-icon-button color="accent"
+        (click)="onFavorite(group.label)">
+        <mat-icon fontSet="material-symbols-outlined">heart_plus</mat-icon>
+      </button>
+      <span>{{group.label}}</span>
+      <div fxFlex></div>
+      <div class="right" fxLayout="row" fxFlexAlign="center center">
+        <button mat-icon-button color="accent"
+          (click)="onGroup(group.label, 'O')">
+          <mat-icon fontSet="material-symbols-outlined">expand_less</mat-icon>
+        </button>
+        <button mat-icon-button color="accent"
+          (click)="onGroup(group.label, 'C')">
+          <mat-icon fontSet="material-symbols-outlined">expand_more</mat-icon>
+        </button>
       </div>
+    </mat-list-item>
+  </mat-list>
 
-    </mat-card-header>
+  <h2>Individuel</h2>
 
-  </mat-card>
+  <mat-list>
+    <mat-list-item *ngFor="let shutter of shutters | keyvalue: unsorted" class="mat-elevation-z2">
+      <img matListAvatar [src]="'/assets/house/'+shutter.key+'.png'">
+      <button mat-icon-button color="accent"
+        (click)="onFavorite(shutter.key)">
+        <mat-icon fontSet="material-symbols-outlined">heart_plus</mat-icon>
+      </button>
+      <span>{{shutter.value.label}}</span>
+      <div fxFlex></div>
+      <div class="right" fxLayout="row" fxFlexAlign="center center">
+        <button mat-icon-button color="accent"
+          (click)="onChange(shutter.key, 'O')">
+          <mat-icon fontSet="material-symbols-outlined">expand_less</mat-icon>
+        </button>
+        <button mat-icon-button color="accent"
+          (click)="onChange(shutter.key, 'C')">
+          <mat-icon fontSet="material-symbols-outlined">expand_more</mat-icon>
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
 
 </div>

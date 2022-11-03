@@ -6,25 +6,36 @@
   overflow-y: auto;
 }
 
-.mat-card {
+.mat-list {
+  max-width: 300px;
   min-width: 300px;
 }
 
+.mat-list-item {
+  background-color: mat.get-color-from-palette($djinn-default, 700);
+  margin: 8px 4px;
+
+  &.mat-2-line {
+    height: 96px !important;
+  }
+}
+
+::ng-deep .mat-list-text {
+  padding-left: 0 !important;
+}
+
 .right {
-  $size: 36px;
+  $size: 24px;
 
   font-size: $size;
   line-height: $size;
   font-family: 'Digit';
   color: mat.get-color-from-palette($djinn-primary, 500);
+  padding-right: 4px;
 
-  .mat-icon {
-    height: $size;
-    width: $size;
-    font-size: $size;
-  }
-}
-
-::ng-deep .mat-card-header-text {
-  margin: 0 12px 0 0 !important;
+  // .mat-icon {
+  //   height: $size;
+  //   width: $size;
+  //   font-size: $size;
+  // }
 }
