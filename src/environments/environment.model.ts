@@ -1,3 +1,5 @@
+import { Appliance } from "src/app/appliances.service"
+
 export interface Menu {
   label: string
   icon: string
@@ -8,6 +10,7 @@ export interface Environment {
   production: boolean
   owServerHost: string
   mainMenus: Menu[]
+  appliances: Appliance[]
 }
 
 export const defaultEnvironment: Environment = {
@@ -20,5 +23,6 @@ export const defaultEnvironment: Environment = {
     { label: 'Chauffage', icon: 'nest_true_radiant', page: 'heater' },
     { label: 'Programmation', icon: 'edit_calendar', page: 'calendar' },
     { label: 'Linky', icon: 'cable', page: 'linky' },
-  ]
+  ],
+  appliances: [],
 }

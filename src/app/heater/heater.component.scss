@@ -25,7 +25,7 @@
 }
 
 .right {
-  $size: 24px;
+  $size: 32px;
 
   font-size: $size;
   line-height: $size;
@@ -33,9 +33,9 @@
   color: mat.get-color-from-palette($djinn-primary, 500);
   padding-right: 4px;
 
-  // .mat-icon {
-  //   height: $size;
-  //   width: $size;
-  //   font-size: $size;
-  // }
+  .mat-icon {
+    height: $size;
+    width: $size;
+    font-size: $size;
+  }
 }

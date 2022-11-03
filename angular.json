@@ -73,6 +73,7 @@
               "browserTarget": "djinn:build:production"
             },
             "development": {
+              "host": "0.0.0.0",
               "browserTarget": "djinn:build:development"
             }
           },
