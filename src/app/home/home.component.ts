@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 
 import { environment } from '../../environments/environment'
@@ -16,20 +16,14 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private appliancesService: AppliancesService
-
+    private appliancesService: AppliancesService,
   ) {
     this.applianceIds = this.appliancesService.getFavorites()
   }
 
   ngOnInit(): void {
     // filter appliance for this page
-    for (const [key, appliance] of Object.entries(this.appliancesService.appliances)) {
-      if (this.applianceIds.includes(key)) {
-        this.appliances[key] = appliance
-      }
-    }
-
+    this.appliances = this.buildAppliances()
   }
 
   onGoto(page: string) {
@@ -39,6 +33,16 @@ export class HomeComponent implements OnInit {
   onFavorite(applianceKey: string) {
     const isFavorite = this.appliancesService.toggleFavorite(applianceKey)
     this.appliances[applianceKey].isFavorite = isFavorite
+    this.appliances = this.buildAppliances()
   }
 
+  private buildAppliances(): Appliances {
+    const out: Appliances = {}
+    for (const [key, appliance] of Object.entries(this.appliancesService.appliances)) {
+      if (this.applianceIds.includes(key)) {
+        out[key] = appliance
+      }
+    }
+    return out
+  }
 }

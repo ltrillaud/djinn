@@ -2,32 +2,10 @@
 
 
   <h2>Groupe</h2>
+  <app-appliances [appliances]="groups"></app-appliances>
+
+
   <h2>Individuel</h2>
-
-  <mat-list>
-    <mat-list-item *ngFor="let appliance of appliances | keyvalue" class="mat-elevation-z2">
-
-      <img matListAvatar [src]="'/assets/house/'+appliance.key+'.png'">
-
-      <button mat-icon-button
-        [color]="appliance.value.isFavorite ? 'primary' : 'accent'"
-        (click)="onFavorite(appliance.key)">
-        <mat-icon fontSet="material-symbols-outlined">
-          {{appliance.value.isFavorite ? 'heart_minus' : 'heart_plus'}}
-        </mat-icon>
-      </button>
-      <div fxFlex>
-        <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
-          <div>{{appliance.value.label.line1}}</div>
-          <div>{{appliance.value.label.line2}}</div>
-        </div>
-        <div fxFlex></div>
-        <div class="right" fxLayout="row" fxFlexAlign="center center">
-          <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
-          <div>21.2</div>
-        </div>
-      </div>
-    </mat-list-item>
-  </mat-list>
+  <app-appliances [appliances]="appliances"></app-appliances>
 
 </div>

@@ -8,6 +8,7 @@ import { Environment, defaultEnvironment } from "./environment.model"
 export const environment: Environment = {
   ...defaultEnvironment,
   production: false,
+  owServerHost: 'https://localhost:8001',
 };
 
 /*

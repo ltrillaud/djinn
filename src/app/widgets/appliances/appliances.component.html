@@ -1,1 +1,56 @@
-<p>appliances works!</p>
+<mat-list>
+  <mat-list-item *ngFor="let appliance of appliances | keyvalue: unsorted" class="mat-elevation-z2">
+
+    <div matLine class="line1">
+      <img matListAvatar [src]="'/assets/house/'+appliance.value.iconId+'.png'">
+      <button mat-icon-button
+        [color]="appliance.value.isFavorite ? 'primary' : 'accent'"
+        (click)="onFavorite(appliance.key)">
+        <mat-icon fontSet="material-symbols-outlined">
+          {{appliance.value.isFavorite ? 'heart_minus' : 'heart_plus'}}
+        </mat-icon>
+      </button>
+      <div fxFlex>
+        <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
+          <div>{{appliance.value.label.line1}}</div>
+          <div>{{appliance.value.label.line2}}</div>
+        </div>
+        <div fxFlex></div>
+        <div *ngIf="appliance.value.layout.temperature" class="right" fxLayout="row" fxFlexAlign="center center">
+          <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+          <div>{{appliance.value.temperature}}</div>
+        </div>
+        <div *ngIf="appliance.value.layout.shutter" class="right" fxLayout="row" fxFlexAlign="center center">
+          <button mat-icon-button color="accent"
+            (click)="onUpdate(appliance.key, 'O')">
+            <mat-icon fontSet="material-symbols-outlined">expand_less</mat-icon>
+          </button>
+          <button mat-icon-button color="accent"
+            (click)="onUpdate(appliance.key, 'C')">
+            <mat-icon fontSet="material-symbols-outlined">expand_more</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="appliance.value.layout.heater" matLine class="line2" fxLayout="row"
+      fxLayoutAlign="space-between center">
+      <button mat-icon-button [color]="appliance.value.mode === 'C' ? 'primary' : 'accent'"
+        (click)="onUpdate(appliance.key, 'C')">
+        <mat-icon fontSet="material-symbols-outlined">light_mode</mat-icon>
+      </button>
+      <button mat-icon-button [color]="appliance.value.mode === '1' ? 'primary' : 'accent'"
+        (click)="onUpdate(appliance.key, '1')">
+        <mat-icon fontSet="material-symbols-outlined">brightness_6</mat-icon>
+      </button>
+      <button mat-icon-button [color]="appliance.value.mode === '2' ? 'primary' : 'accent'"
+        (click)="onUpdate(appliance.key, '2')">
+        <mat-icon fontSet="material-symbols-outlined">brightness_4</mat-icon>
+      </button>
+      <button mat-icon-button [color]="appliance.value.mode === 'E' ? 'primary' : 'accent'"
+        (click)="onUpdate(appliance.key, 'E')">
+        <mat-icon fontSet="material-symbols-outlined">mode_night</mat-icon>
+      </button>
+    </div>
+  </mat-list-item>
+</mat-list>

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { lastValueFrom } from 'rxjs'
 import { environment } from '../../environments/environment'
+import { Appliances, AppliancesService } from '../appliances.service'
 
 type HeaterType = 'S' | 'R' | 'A' | 'M' | 'P'
 type ModeType = 'C' | '1' | '2' | 'E'
@@ -21,6 +22,9 @@ interface Heater {
   styleUrls: ['./heater.component.scss']
 })
 export class HeaterComponent implements OnInit {
+  applianceIds: string[] = ['S', 'P', 'M', 'A', 'R']
+  appliances: Appliances = {}
+
   heaters: Heater[] = [
     { key: 'S', mode: 'E', label: { line1: 'Salon et', line2: 'Séjour' } },
     { key: 'P', mode: 'E', label: { line1: 'Chambre', line2: 'Parentale' } },
@@ -29,8 +33,16 @@ export class HeaterComponent implements OnInit {
     { key: 'R', mode: 'E', label: { line1: 'Salle de', line2: 'Bain' } },
   ]
   constructor(
+    private appliancesService: AppliancesService,
     private httpClient: HttpClient,
-  ) { }
+  ) {
+    // filter appliance for this page
+    for (const [key, appliance] of Object.entries(this.appliancesService.appliances)) {
+      if (this.applianceIds.includes(key)) {
+        this.appliances[key] = appliance
+      }
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -1,14 +1,41 @@
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
+import { lastValueFrom } from 'rxjs'
 
 import { environment } from '../environments/environment'
+import { c } from './console'
 
+export type FamilyType = 'temperature' | 'humudity' | 'PIO'
+export interface DeviceReadResponse {
+  value: string
+  family: FamilyType
+}
+export interface ApplianceResponse {
+  appliance: string
+  devices: { [key: string]: DeviceReadResponse }
+}
 
-export interface Appliance {
-  label: {
-    line1: string
-    line2: string
+export type LayoutType = 'temperature' | 'shutter' | 'heater'
+export type ModeType = 'O' | 'C' | '1' | '2' | 'E' | null
+export class Appliance {
+  isFavorite: boolean = false
+  iconId: string = ''
+  aplRes: ApplianceResponse[] = []
+  temperature: string = ''
+  layout: { [key in LayoutType]: boolean } = {
+    temperature: false,
+    shutter: false,
+    heater: false,
   }
-  isFavorite: boolean
+  mode: ModeType = null
+
+  constructor(
+    public aplIds: string[],
+    public label: { line1: string; line2: string },
+    iconId?: string
+  ) {
+    this.iconId = iconId || aplIds[0] || ''
+  }
 }
 export interface Appliances { [index: string]: Appliance }
 
@@ -20,15 +47,33 @@ export class AppliancesService {
   favorites: string[] = []
   appliances = environment.appliances
 
-  constructor() {
+  constructor(
+    private httpClient: HttpClient,
+  ) {
     // restore favorite from local Storage
     this.favorites = this.getFavorites()
-    console.log(`    applianceServ.ts favorites`, this.favorites)
+    console.log(c(this), `favorites`, this.favorites)
 
-    // update favorite in appliances
+    // first update favorite in appliances
     for (const id of this.favorites) {
       this.appliances[id].isFavorite = true
+      this.fetchAppliance(id).then(() => {
+        console.log(c(this), `constructor fetchAppliance(${id}) ok`)
+      }).catch(error => {
+        console.log(c(this), `constructor fetchAppliance(${id}) ko`, error)
+      })
     }
+
+    // then update the other appliances
+    Object.keys(this.appliances).filter(
+      (key) => !this.favorites.includes(key)
+    ).map((key) => {
+      this.fetchAppliance(key).then(() => {
+        console.log(c(this), `constructor fetchAppliance(${key}) ok`)
+      }).catch(error => {
+        console.log(c(this), `constructor fetchAppliance(${key}) ko`, error)
+      })
+    })
   }
 
   getFavorites(): string[] {
@@ -79,4 +124,63 @@ export class AppliancesService {
     console.log(`  appliancesServ.ts toggleFavorite(${applianceKey})=(${isFavorite})`)
     return isFavorite
   }
+
+  async onUpdate(applianceKey: string, mode: ModeType) {
+    const appliance = this.appliances[applianceKey]
+    for (const aplId of appliance.aplIds) {
+      const url = `${environment.owServerHost}/apl/${aplId}`
+      console.log(c(this), `fetchAppliance(${url})`)
+      try {
+        const response = await lastValueFrom(this.httpClient.put(url, { value: mode }))
+        console.log(c(this), `onUpdate id(${applianceKey})=(${mode}), response`, response)
+      } catch (error) {
+        console.log(c(this), `onUpdate failed`, error)
+      }
+    }
+  }
+
+  private async fetchAppliance(id: string): Promise<void> {
+    const appliance = this.appliances[id]
+    for (const aplId of this.appliances[id].aplIds) {
+      const url = `${environment.owServerHost}/apl/${aplId}`
+      console.log(c(this), `fetchAppliance(${url})`)
+      const aplRes = await lastValueFrom(this.httpClient.get<ApplianceResponse>(url))
+      console.log(c(this), `fetchAppliance id(${id}), result`, aplRes)
+      appliance.aplRes.push(aplRes)
+      if (aplRes.appliance === 'shutter') {
+        appliance.layout.shutter = true
+      }
+      if (aplRes.appliance === 'heater') {
+        appliance.layout.heater = true
+        appliance.mode = (aplRes.devices['PIO'].value || null) as ModeType
+      }
+    }
+
+    // compute mean temperature
+    let sum = 0
+    let nbr = 0
+    let nan = 0
+    for (const res of appliance.aplRes) {
+      for (const device of Object.values(res.devices)) {
+        if (device.family === 'temperature') {
+          appliance.layout.temperature = true
+          const val = parseFloat(device.value)
+          if (!isNaN(val)) {
+            sum += val
+            nbr++
+          } else {
+            nan++
+          }
+        }
+      }
+    }
+    if (nbr > 0) {
+      this.appliances[id].temperature = (sum / nbr).toFixed(1).toString().padStart(4, '0')
+    } else if (nan > 0) {
+      this.appliances[id].temperature = 'NaN'
+    }
+    console.log(c(this), `fetchAppliance id(${id}) temp(${this.appliances[id].temperature})`)
+
+  }
+
 }
