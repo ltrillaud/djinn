@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
-import { Appliances, AppliancesService } from '../appliances.service'
+import { Appliances } from '../appliances.model'
+import { AppliancesService } from '../appliances.service'
 
 @Component({
   selector: 'app-shutter',
@@ -26,5 +27,4 @@ export class ShutterComponent {
     }
   }
 
-  unsorted(): number { return 0 }
 }

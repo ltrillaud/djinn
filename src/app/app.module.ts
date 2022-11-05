@@ -17,7 +17,7 @@ import { HeaterComponent } from './heater/heater.component'
 import { TemperatureComponent } from './temperature/temperature.component'
 import { ShutterComponent } from './shutter/shutter.component'
 import { CalendarComponent } from './calendar/calendar.component'
-import { LinkyComponent } from './linky/linky.component';
+import { LinkyComponent } from './linky/linky.component'
 import { AppliancesComponent } from './widgets/appliances/appliances.component'
 
 @NgModule({
@@ -29,7 +29,7 @@ import { AppliancesComponent } from './widgets/appliances/appliances.component'
     ShutterComponent,
     CalendarComponent,
     LinkyComponent,
-    AppliancesComponent
+    AppliancesComponent,
   ],
   imports: [
     AppRoutingModule,

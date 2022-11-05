@@ -1,21 +1,19 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Appliances, AppliancesService, ModeType } from 'src/app/appliances.service';
-import { c } from 'src/app/console';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core'
+import { Appliances, ModeType } from 'src/app/appliances.model'
+import { AppliancesService } from 'src/app/appliances.service'
+import { c } from 'src/app/console'
 
 @Component({
   selector: 'app-appliances',
   templateUrl: './appliances.component.html',
   styleUrls: ['./appliances.component.scss']
 })
-export class AppliancesComponent implements OnInit, OnChanges {
+export class AppliancesComponent implements OnChanges {
   @Input('appliances') appliances: Appliances = {}
 
   constructor(
     private appliancesService: AppliancesService,
   ) { }
-
-  ngOnInit(): void {
-  }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(c(this), `onChanges`, changes)

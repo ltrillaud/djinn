@@ -1,21 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Appliances, AppliancesService } from '../appliances.service';
-
-
-interface Temperature {
-  key: string
-  label: {
-    line1: string
-    line2: string
-  }
-}
+import { Component, OnInit } from '@angular/core'
+import { Appliances } from '../appliances.model'
+import { AppliancesService } from '../appliances.service'
 
 @Component({
   selector: 'app-temperature',
   templateUrl: './temperature.component.html',
   styleUrls: ['./temperature.component.scss']
 })
-export class TemperatureComponent implements OnInit {
+export class TemperatureComponent {
   applianceIds: string[] = ['J1P', 'C1P', 'U1', /*'P1',*/ 'M1', 'A1', 'B1', 'X1', 'R1', 'H1']
   groupsIds: string[] = ['livingRoom', 'haut']
   appliances: Appliances = {}
@@ -35,11 +27,4 @@ export class TemperatureComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
-
-  onFavorite(applianceKey: string) {
-    const isFavorite = this.appliancesService.toggleFavorite(applianceKey)
-    this.appliances[applianceKey].isFavorite = isFavorite
-  }
 }

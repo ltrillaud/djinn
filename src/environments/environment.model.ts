@@ -1,4 +1,4 @@
-import { Appliance, Appliances } from "src/app/appliances.service"
+import { Appliance, Appliances } from "src/app/appliances.model"
 
 export interface Menu {
   label: string

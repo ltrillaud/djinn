@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 import { Router } from '@angular/router'
 
 import { environment } from '../../environments/environment'
-import { Appliances, AppliancesService } from '../appliances.service'
+import { Appliances } from '../appliances.model'
+import { AppliancesService } from '../appliances.service'
 
 @Component({
   selector: 'app-home',
