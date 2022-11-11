@@ -1,5 +1,7 @@
 import { Appliance, Appliances } from "src/app/appliances.model"
+import { TServiceProvider } from "src/app/auth/auth.service"
 
+import pack from '../../package.json'
 export interface Menu {
   label: string
   icon: string
@@ -8,13 +10,21 @@ export interface Menu {
 
 export interface Environment {
   production: boolean
+  version: string
   owServerHost: string
   mainMenus: Menu[]
   appliances: Appliances
+  serviceProviderName: TServiceProvider
+  bypassSsoConfig: string
+  bypassSsoDomain: string
 }
 
 export const defaultEnvironment: Environment = {
   production: true,
+  version: pack.version,
+  serviceProviderName: 'djinn',
+  bypassSsoConfig: '',
+  bypassSsoDomain: '',
   owServerHost: 'https://192.168.1.1:8001',
   mainMenus: [
     { label: 'Accueil', icon: 'home', page: 'home' },
@@ -23,6 +33,7 @@ export const defaultEnvironment: Environment = {
     { label: 'Chauffage', icon: 'nest_true_radiant', page: 'heater' },
     { label: 'Programmation', icon: 'edit_calendar', page: 'calendar' },
     { label: 'Linky', icon: 'cable', page: 'linky' },
+    { label: 'Déconnexion', icon: 'power_settings_new', page: 'logout' },
   ],
   appliances: {
     // heater : Indiv

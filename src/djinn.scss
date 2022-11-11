@@ -18,8 +18,7 @@ $mat-everial-dark-blue: (
   A200: #2867ff,
   A400: #0048f4,
   A700: #0040da,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #ffffff,
@@ -51,8 +50,7 @@ $mat-everial-medium-blue: (
   A200: #4991ff,
   A400: #1672ff,
   A700: #0063fc,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #ffffff,
@@ -84,8 +82,7 @@ $mat-everial-light-blue: (
   A200: #cbe6ff,
   A400: #98ceff,
   A700: #7fc2ff,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -117,8 +114,7 @@ $mat-everial-red: (
   A200: #ffffff,
   A400: #ffeeee,
   A700: #ffd4d5,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -150,8 +146,7 @@ $mat-everial-green: (
   A200: #f2ffdb,
   A400: #dfffa8,
   A700: #d6ff8f,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -183,8 +178,7 @@ $mat-everial-purple: (
   A200: #aa99ff,
   A400: #7f66ff,
   A700: #694dff,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -216,8 +210,7 @@ $mat-everial-teal: (
   A200: #e1fff8,
   A400: #aeffec,
   A700: #95ffe5,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -252,8 +245,7 @@ $mat-semantic-red: (
   A200: #ff6767,
   A400: #ff3434,
   A700: #ff1a1a,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #ffffff,
@@ -285,8 +277,7 @@ $mat-semantic-orange: (
   A200: #ffd093,
   A400: #ffba60,
   A700: #ffaf47,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -318,8 +309,7 @@ $mat-semantic-green: (
   A200: #6aff4a,
   A400: #40ff17,
   A700: #2dfc00,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
@@ -351,8 +341,7 @@ $mat-semantic-blue: (
   A200: #6294ff,
   A400: #2f71ff,
   A700: #155fff,
-  contrast: (
-    50: #000000,
+  contrast: (50: #000000,
     100: #000000,
     200: #000000,
     300: #ffffff,
@@ -375,9 +364,21 @@ $djinn-black: mat.get-color-from-palette($mat-everial-dark-blue, 900);
 
 // change dark foreground palette
 $dark-foreground-color-base: mat.get-color-from-palette($mat-everial-light-blue, 50);
-$light-dividers: mat.get-color-from-palette($mat-everial-light-blue, 200);
-$light-disabled-text: mat.get-color-from-palette($mat-everial-light-blue, 300);
-$light-secondary-text: mat.get-color-from-palette($mat-everial-light-blue, 400);
+$light-dividers: rgba($djinn-white, 0.12);
+$light-disabled-text: rgba($djinn-white, 0.5);
+$light-secondary-text: rgba($djinn-white, 0.7);
+
+// example from material defaut
+// $dark-primary-text: rgba(black, 0.87);
+// $dark-secondary-text: rgba(black, 0.54);
+// $dark-disabled-text: rgba(black, 0.38);
+// $dark-dividers: rgba(black, 0.12);
+// $dark-focused: rgba(black, 0.12);
+// $light-primary-text: white;
+// $light-secondary-text: rgba(white, 0.7);
+// $light-disabled-text: rgba(white, 0.5);
+// $light-dividers: rgba(white, 0.12);
+// $light-focused: rgba(white, 0.12);
 
 $djinn-dark-theme-foreground: (
   base: $dark-foreground-color-base,
@@ -421,14 +422,12 @@ $djinn-dark-theme-background: (
 
 // instead of creating a theme with mat-light-theme like a sane person, we will create our own theme-creating function that lets us apply our own foreground and background palettes.
 @function create-color-theme($primary, $accent, $warn) {
-  @return (
-    primary: $primary,
+  @return (primary: $primary,
     accent: $accent,
     warn: $warn,
     is-dark: true,
     foreground: $djinn-dark-theme-foreground,
-    background: $djinn-dark-theme-background
-  );
+    background: $djinn-dark-theme-background );
 }
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -444,17 +443,13 @@ $djinn-warn: mat.define-palette($mat-everial-red);
 $djinn-color-theme: create-color-theme($djinn-primary, $djinn-accent, $djinn-warn);
 
 // Specify "Poppins" as the default font family for all levels.
-$djinn-typo-theme: mat.define-typography-config(
-  $font-family: 'Poppins',
-);
+$djinn-typo-theme: mat.define-typography-config($font-family: 'Poppins',
+  );
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 // @include mat.all-component-themes($djinn-theme);
-@include mat.all-component-themes(
-  (
-    color: $djinn-color-theme,
+@include mat.all-component-themes((color: $djinn-color-theme,
     typography: $djinn-typo-theme,
-  )
-);
+  ));

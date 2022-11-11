@@ -1,0 +1,20 @@
+<mat-card id="logout-dlg" class="mat-elevation-z2">
+  <mat-card-header>
+    <img mat-card-avatar src="https://gravatar.com/avatar/0?d=mp">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle title="v{{version}}">{{subTitle}} v{{version}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <img src="/assets/djinn.png" id="logo" alt="logo">
+
+    <h1>Déconnecté</h1>
+  </mat-card-content>
+  <mat-card-actions>
+    <div fxFlex="1 1 auto"></div>
+    <button mat-button (click)="onConnect()" title="Connexion" color="accent">
+      <mat-icon fontSet="material-symbols-outlined">power_settings_new</mat-icon>
+      <span>Connection</span>
+    </button>
+  </mat-card-actions>
+</mat-card>

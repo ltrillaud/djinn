@@ -4,6 +4,7 @@ import { lastValueFrom } from 'rxjs'
 
 import { environment } from '../environments/environment'
 import { ApplianceResponse, ModeType } from './appliances.model'
+import { AuthService } from './auth/auth.service'
 import { c } from './console'
 
 @Injectable({
@@ -16,30 +17,35 @@ export class AppliancesService {
 
   constructor(
     private httpClient: HttpClient,
+    private authService: AuthService,
   ) {
     // restore favorite from local Storage
     this.favorites = this.getFavorites()
     console.log(c(this), `favorites`, this.favorites)
 
-    // first update favorite in appliances
-    for (const id of this.favorites) {
-      this.appliances[id].isFavorite = true
-      this.fetchAppliance(id).then(() => {
-        console.log(c(this), `constructor fetchAppliance(${id}) ok`)
-      }).catch(error => {
-        console.log(c(this), `constructor fetchAppliance(${id}) ko`, error)
-      })
-    }
+    this.authService.onLogin$.subscribe(next => {
+      if (next.action === 'login') {
+        // first update favorite in appliances
+        for (const id of this.favorites) {
+          this.appliances[id].isFavorite = true
+          this.fetchAppliance(id).then(() => {
+            console.log(c(this), `constructor fetchAppliance(${id}) ok`)
+          }).catch(error => {
+            console.log(c(this), `constructor fetchAppliance(${id}) ko`, error)
+          })
+        }
 
-    // then update the other appliances
-    Object.keys(this.appliances).filter(
-      (key) => !this.favorites.includes(key)
-    ).map((key) => {
-      this.fetchAppliance(key).then(() => {
-        console.log(c(this), `constructor fetchAppliance(${key}) ok`)
-      }).catch(error => {
-        console.log(c(this), `constructor fetchAppliance(${key}) ko`, error)
-      })
+        // then update the other appliances
+        Object.keys(this.appliances).filter(
+          (key) => !this.favorites.includes(key)
+        ).map((key) => {
+          this.fetchAppliance(key).then(() => {
+            console.log(c(this), `constructor fetchAppliance(${key}) ok`)
+          }).catch(error => {
+            console.log(c(this), `constructor fetchAppliance(${key}) ko`, error)
+          })
+        })
+      }
     })
   }
 

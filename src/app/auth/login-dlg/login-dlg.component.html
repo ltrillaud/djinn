@@ -1,0 +1,40 @@
+<mat-card id="login-dlg" class="mat-elevation-z2">
+  <mat-card-header>
+    <img mat-card-avatar src="https://gravatar.com/avatar/0?d=mp">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle title="v{{version}}">{{subTitle}} v{{version}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <img src="/assets/djinn.png" id="logo" alt="logo">
+    <form #form="ngForm" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="fill">
+        <mat-label>Identifiant</mat-label>
+        <input matInput type="text" name="login" id="login" required="required"
+          (keydown.enter)="onPasswordEnter($event)"
+          [(ngModel)]="model.login" #loginCtl="ngModel">
+        <mat-error *ngIf="loginCtl.invalid">Champ requis!</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'"
+          name="password" id="password" required="required"
+          (keydown.enter)="onPasswordEnter($event)"
+          [(ngModel)]="model.password" #passwordCtl="ngModel">
+        <button class="mousetrap-pause" mat-icon-button color="accent" matSuffix (click)="hide = !hide"
+          aria-label="Montrer le mot de passe" [attr.aria-pressed]="hide">
+          <mat-icon fontSet="material-symbols-outlined">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordCtl.invalid">Champ requis!</mat-error>
+      </mat-form-field>
+    </form>
+    <div id="message">{{message}}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <span fxFlex="1 1 auto"></span>
+    <button mat-button (click)="onConnect()" title="Connexion" color="accent">
+      <mat-icon fontSet="material-symbols-outlined">power_settings_new</mat-icon>
+      <span>Connexion</span>
+    </button>
+  </mat-card-actions>
+</mat-card>
