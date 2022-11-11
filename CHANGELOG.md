@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/ltrillaud/djinn/compare/v1.0.1...v1.0.2) (2022-11-11)
+
+
+### Bug Fixes
+
+* **app:** remove budget errors ([cf67173](https://github.com/ltrillaud/djinn/commit/cf67173d84a95b179db985151c965de61cdc2edc))
+
 ### [1.0.1](https://github.com/ltrillaud/djinn/compare/v1.0.0...v1.0.1) (2022-11-11)
 
 ## [1.0.0](https://github.com/ltrillaud/djinn/compare/v0.0.1...v1.0.0) (2022-11-11)
