@@ -25,7 +25,7 @@ export const defaultEnvironment: Environment = {
   serviceProviderName: 'djinn',
   bypassSsoConfig: '',
   bypassSsoDomain: '',
-  owServerHost: 'https://192.168.1.1:8001',
+  owServerHost: 'https://owfs.trillaud.com',
   mainMenus: [
     { label: 'Accueil', icon: 'home', page: 'home' },
     { label: 'Température', icon: 'thermostat', page: 'temperature' },
