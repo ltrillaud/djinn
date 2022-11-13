@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ltrillaud/djinn/compare/v1.0.3...v1.1.0) (2022-11-13)
+
+
+### Features
+
+* **calendar:** prepare calendar ([5e0f771](https://github.com/ltrillaud/djinn/commit/5e0f7711854231c9f052001196ced78c9ccb1e04))
+
+
+### Bug Fixes
+
+* **app:** add toolbar footer ([2b559d4](https://github.com/ltrillaud/djinn/commit/2b559d4fcc636e69be1f887e5d774729ad334c00))
+* **home:** fix favorite update list ([39cc87e](https://github.com/ltrillaud/djinn/commit/39cc87e78fef28017782fb3c73a1c108352467f2))
+
 ### [1.0.3](https://github.com/ltrillaud/djinn/compare/v1.0.2...v1.0.3) (2022-11-13)
 
 
