@@ -1,6 +1,8 @@
 <div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
-
-  <h2> Météo</h2>
-  <h2> Favoris</h2>
-  <app-appliances  [appliances]="appliances"></app-appliances>
+  <h2 [ngPlural]="appliancesService.favoriteIds.length">
+    <ng-template ngPluralCase="0">Pas de favori</ng-template>
+    <ng-template ngPluralCase="1">Favori</ng-template>
+    <ng-template ngPluralCase="other">Favoris</ng-template>
+  </h2>
+  <app-appliances  [appliances]="appliancesService.favoriteAppliances"></app-appliances>
 </div>

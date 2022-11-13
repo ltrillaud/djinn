@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'
 import { lastValueFrom } from 'rxjs'
 
 import { environment } from '../environments/environment'
-import { ApplianceResponse, ModeType } from './appliances.model'
+import { ApplianceResponse, Appliances, ModeType } from './appliances.model'
 import { AuthService } from './auth/auth.service'
 import { c } from './console'
 
@@ -12,21 +12,23 @@ import { c } from './console'
 })
 export class AppliancesService {
   private readonly storageName = 'djinn-favorites'
-  favorites: string[] = []
+  favoriteIds: string[] = []
   appliances = environment.appliances
+  favoriteAppliances: Appliances = {}
 
   constructor(
     private httpClient: HttpClient,
     private authService: AuthService,
   ) {
     // restore favorite from local Storage
-    this.favorites = this.getFavorites()
-    console.log(c(this), `favorites`, this.favorites)
+    this.restoreFavoriteIds()
+    this.buildFavoriteAppliances()
+    console.log(c(this), `favorites`, this.favoriteIds)
 
     this.authService.onLogin$.subscribe(next => {
       if (next.action === 'login') {
         // first update favorite in appliances
-        for (const id of this.favorites) {
+        for (const id of this.favoriteIds) {
           this.appliances[id].isFavorite = true
           this.fetchAppliance(id).then(() => {
             console.log(c(this), `constructor fetchAppliance(${id}) ok`)
@@ -37,7 +39,7 @@ export class AppliancesService {
 
         // then update the other appliances
         Object.keys(this.appliances).filter(
-          (key) => !this.favorites.includes(key)
+          (key) => !this.favoriteIds.includes(key)
         ).map((key) => {
           this.fetchAppliance(key).then(() => {
             console.log(c(this), `constructor fetchAppliance(${key}) ok`)
@@ -49,34 +51,16 @@ export class AppliancesService {
     })
   }
 
-  getFavorites(): string[] {
-    const applianceIds = Object.keys(this.appliances)
-    let favorites: string[] = []
-    const raw = localStorage.getItem(this.storageName) || ''
-    try {
-      const ids = JSON.parse(raw)
-      if (Array.isArray(ids)) {
-        // filter fake ids
-        favorites = ids.filter(id => applianceIds.includes(id))
-      } else {
-        console.warn(`'${this.storageName}' should be an array in localStorage`)
-      }
-    } catch (error) {
-      console.warn(`'${this.storageName}' should be a valid JSON in localStorage`)
-    }
-    return favorites
-  }
-
   pushFavorite(id: string) {
-    this.favorites.push(id)
-    localStorage.setItem(this.storageName, JSON.stringify(this.favorites))
+    this.favoriteIds.push(id)
+    localStorage.setItem(this.storageName, JSON.stringify(this.favoriteIds))
   }
 
   pullFavorite(id: string) {
-    const idx = this.favorites.indexOf(id)
+    const idx = this.favoriteIds.indexOf(id)
     if (idx !== -1) {
-      this.favorites.splice(idx, 1)
-      localStorage.setItem(this.storageName, JSON.stringify(this.favorites))
+      this.favoriteIds.splice(idx, 1)
+      localStorage.setItem(this.storageName, JSON.stringify(this.favoriteIds))
     } else {
       console.warn(`'${this.storageName}'pull favorite (${id}) not in localStorage`)
     }
@@ -84,17 +68,18 @@ export class AppliancesService {
 
   toggleFavorite(applianceKey: string): boolean {
     let isFavorite: boolean
-    const idx = this.favorites.indexOf(applianceKey)
+    const idx = this.favoriteIds.indexOf(applianceKey)
     if (idx !== -1) {
-      this.favorites.splice(idx, 1)
+      this.favoriteIds.splice(idx, 1)
       isFavorite = false
     } else {
-      this.favorites.push(applianceKey)
+      this.favoriteIds.push(applianceKey)
       isFavorite = true
     }
-    localStorage.setItem(this.storageName, JSON.stringify(this.favorites))
+    localStorage.setItem(this.storageName, JSON.stringify(this.favoriteIds))
     this.appliances[applianceKey].isFavorite = isFavorite
     console.log(`  appliancesServ.ts toggleFavorite(${applianceKey})=(${isFavorite})`)
+    this.buildFavoriteAppliances()
     return isFavorite
   }
 
@@ -109,6 +94,23 @@ export class AppliancesService {
       } catch (error) {
         console.log(c(this), `onUpdate failed`, error)
       }
+    }
+  }
+
+  private restoreFavoriteIds(): void {
+    const applianceIds = Object.keys(this.appliances)
+    this.favoriteIds = []
+    const raw = localStorage.getItem(this.storageName) || ''
+    try {
+      const ids = JSON.parse(raw)
+      if (Array.isArray(ids)) {
+        // filter fake ids
+        this.favoriteIds = ids.filter(id => applianceIds.includes(id))
+      } else {
+        console.warn(`'${this.storageName}' should be an array in localStorage`)
+      }
+    } catch (error) {
+      console.warn(`'${this.storageName}' should be a valid JSON in localStorage`)
     }
   }
 
@@ -156,4 +158,15 @@ export class AppliancesService {
 
   }
 
+  private buildFavoriteAppliances(): void {
+    const out: Appliances = {}
+    for (const [key, appliance] of Object.entries(this.appliances)) {
+      if (this.favoriteIds.includes(key)) {
+        out[key] = appliance
+      }
+    }
+    console.log(c(this), `buildAppliances found(${Object.keys(out).length})`)
+
+    this.favoriteAppliances = out
+  }
 }
