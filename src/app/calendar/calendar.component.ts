@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+import { AppliancesService } from '../appliances.service'
 
 @Component({
   selector: 'app-calendar',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public appliancesService: AppliancesService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onAdd(): void {
+    this.router.navigate(['calendar', 'edit'])
+  }
 }

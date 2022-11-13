@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import '../../../djinn';
+
+#save {
+  position: absolute;
+  bottom: 72px;
+  right: 16px;
+}
+
+h2 {
+  color: mat.get-color-from-palette($djinn-primary, 500);
+}

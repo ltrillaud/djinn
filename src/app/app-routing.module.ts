@@ -11,6 +11,7 @@ import { AuthGuard } from './auth/auth.guard'
 import { LoginPageComponent } from './auth/login-page/login-page.component'
 import { environment } from '../environments/environment'
 import { LogoutPageComponent } from './auth/logout-page/logout-page.component'
+import { EditComponent } from './calendar/edit/edit.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,7 +20,12 @@ const routes: Routes = [
   { path: 'temperature', component: TemperatureComponent, canActivate: [AuthGuard] },
   { path: 'shutter', component: ShutterComponent, canActivate: [AuthGuard] },
   { path: 'heater', component: HeaterComponent, canActivate: [AuthGuard] },
-  { path: 'calendar', component: CalendarComponent, canActivate: [AuthGuard] },
+  {
+    path: 'calendar', canActivate: [AuthGuard], children: [
+      { path: '', component: CalendarComponent, canActivate: [AuthGuard] },
+      { path: 'edit', component: EditComponent, canActivate: [AuthGuard] },
+    ]
+  },
   { path: 'linky', component: LinkyComponent, canActivate: [AuthGuard] },
 
   {

@@ -32,7 +32,8 @@ import { environment } from '../environments/environment'
 import { LoginDlgComponent } from './auth/login-dlg/login-dlg.component'
 import { LoginPageComponent } from './auth/login-page/login-page.component'
 import { LogoutDlgComponent } from './auth/logout-dlg/logout-dlg.component'
-import { LogoutPageComponent } from './auth/logout-page/logout-page.component'
+import { LogoutPageComponent } from './auth/logout-page/logout-page.component';
+import { EditComponent } from './calendar/edit/edit.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { LogoutPageComponent } from './auth/logout-page/logout-page.component'
     LoginPageComponent,
     LogoutDlgComponent,
     LogoutPageComponent,
+    EditComponent,
   ],
   imports: [
     AppRoutingModule,

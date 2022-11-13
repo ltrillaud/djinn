@@ -1,1 +1,16 @@
-<p>calendar works!</p>
+<div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
+  <div fxLayout="row" class="">
+    <h2 [ngPlural]="appliancesService.favoriteIds.length" fxFlex>
+      <ng-template ngPluralCase="0">Pas d'événement</ng-template>
+      <ng-template ngPluralCase="1">Événement</ng-template>
+      <ng-template ngPluralCase="other">Événements</ng-template>
+    </h2>
+
+  </div>
+
+  <p>line1</p>
+  <p>line2</p>
+</div>
+<button id="add" mat-mini-fab (click)="onAdd()" color="accent">
+  <mat-icon fontSet="material-symbols-outlined">calendar_add_on</mat-icon>
+</button>

@@ -31,7 +31,7 @@ export const defaultEnvironment: Environment = {
     { label: 'Température', icon: 'thermostat', page: 'temperature' },
     { label: 'Volet Roulant', icon: 'blinds', page: 'shutter' },
     { label: 'Chauffage', icon: 'nest_true_radiant', page: 'heater' },
-    { label: 'Programmation', icon: 'edit_calendar', page: 'calendar' },
+    { label: 'Programmation', icon: 'event_note', page: 'calendar' },
     { label: 'Linky', icon: 'cable', page: 'linky' },
     { label: 'Déconnexion', icon: 'power_settings_new', page: 'logout' },
   ],
