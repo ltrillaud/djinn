@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/ltrillaud/djinn/compare/v1.0.2...v1.0.3) (2022-11-13)
+
+
+### Bug Fixes
+
+* **app:** add deploy script ([677944b](https://github.com/ltrillaud/djinn/commit/677944b797c8cc4d3e8e29389ac2a461a86917dc))
+* **env:** fix host for prod ([956e44f](https://github.com/ltrillaud/djinn/commit/956e44f151396fbaf5496785f733baa7de9c0d76))
+
 ### [1.0.2](https://github.com/ltrillaud/djinn/compare/v1.0.1...v1.0.2) (2022-11-11)
 
 
