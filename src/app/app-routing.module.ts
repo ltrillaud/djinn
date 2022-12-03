@@ -12,6 +12,7 @@ import { LoginPageComponent } from './auth/login-page/login-page.component'
 import { environment } from '../environments/environment'
 import { LogoutPageComponent } from './auth/logout-page/logout-page.component'
 import { EditComponent } from './calendar/edit/edit.component'
+import { WeatherComponent } from './weather/weather.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
     ]
   },
   { path: 'linky', component: LinkyComponent, canActivate: [AuthGuard] },
+  { path: 'weather', component: WeatherComponent, canActivate: [AuthGuard] },
 
   {
     path: 'login', component: LoginPageComponent, data: {

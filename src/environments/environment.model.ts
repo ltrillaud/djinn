@@ -28,6 +28,7 @@ export const defaultEnvironment: Environment = {
   owServerHost: 'https://owfs.trillaud.com',
   mainMenus: [
     { label: 'Accueil', icon: 'home', page: 'home' },
+    { label: 'Météo', icon: 'partly_cloudy_day', page: 'weather' },
     { label: 'Température', icon: 'thermostat', page: 'temperature' },
     { label: 'Volet Roulant', icon: 'blinds', page: 'shutter' },
     { label: 'Chauffage', icon: 'nest_true_radiant', page: 'heater' },
@@ -110,6 +111,10 @@ export const defaultEnvironment: Environment = {
     H1: new Appliance(
       ['H1'],
       { line1: 'Salle de', line2: 'Bain Haut' },
+    ),
+    G1: new Appliance(
+      ['G1'],
+      { line1: 'VMC', line2: '' },
     ),
     // Shutters : Groups
     boulot: new Appliance(

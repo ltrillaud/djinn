@@ -1,0 +1,62 @@
+<div id="holder">
+  <div *ngFor="let day of weather?.days || []" fxLayout="column">
+    <div class="day-cell">
+      <div class="day-title">
+        {{day.date.toDateString()}}
+      </div>
+      <div class="day-line" fxLayout="row">
+        <div *ngFor="let slice of day.slices" fxFlex fxLayout="row">
+          <span class="hour">{{slice.hour.toString().padStart(2, '0')}}</span>
+        </div>
+        <span class="hour-end">
+          {{day.slices[4].hour + 3}}
+        </span>
+      </div>
+      <div class="day-line" fxLayout="row">
+        <div *ngFor="let slice of day.slices" fxFlex fxLayout="row" class="cell">
+          <div *ngIf="slice.forecast" fxLayout="column" fxFlex fxLayoutAlign="start stretch">
+            <i [class]="'main wi wi-owm-day-'+slice.forecast.weather[0].id"></i>
+            <div fxLayout="row">
+              <mat-icon fontSet="material-symbols-outlined" color="primary">cloud</mat-icon>
+              <div fxFlex></div>
+              <div>{{ math.round(slice.forecast.clouds.all) + '%' }}</div>
+            </div>
+            <div fxLayout="row">
+              <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+              <div fxFlex></div>
+              <div>{{ math.round(slice.forecast.main.temp) + '°' }}</div>
+            </div>
+            <div fxLayout="row">
+              <mat-icon fontSet="material-symbols-outlined" color="primary"><span class="material-symbols-outlined">
+                  humidity_percentage
+                </span></mat-icon>
+              <div fxFlex></div>
+              <div>{{ math.round(slice.forecast.main.humidity) + '%' }}</div>
+            </div>
+            <div fxLayout="row">
+              <i [class]="'wi wi-wind towards-'+slice.forecast.wind.deg+'-deg'"></i>
+              <div fxFlex></div>
+              <div>{{ math.round(slice.forecast.wind.speed) + 'k/h' }}</div>
+            </div>
+            <div class="description">{{slice.forecast.weather[0].description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div fxLayout="row" fxFlexAlign="center center">
+    <span>Temperature du toit </span>
+    <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+    <div *ngIf="appliancesService.appliances['X1'].temperature">
+      {{appliancesService.appliances['X1'].temperature}}
+    </div>
+  </div>
+  <div fxLayout="row" fxFlexAlign="center center">
+    <span>Temperature du puit</span>
+    <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+    <div *ngIf="appliancesService.appliances['G1'].aplRes[0]">
+      {{ appliancesService.appliances['G1'].aplRes[0].devices['G1PT'].value.toString().padStart(2, '0') }}
+    </div>
+  </div>
+</div>

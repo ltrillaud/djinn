@@ -27,6 +27,7 @@ export class AppliancesService {
 
     this.authService.onLogin$.subscribe(next => {
       if (next.action === 'login') {
+        // if (false) {
         // first update favorite in appliances
         for (const id of this.favoriteIds) {
           this.appliances[id].isFavorite = true

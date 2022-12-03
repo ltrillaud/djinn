@@ -1,0 +1,51 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import '../../djinn';
+
+.day-cell {
+  margin-bottom: 32px;
+
+  .day-title {
+    text-align: center;
+    font-size: x-large;
+  }
+}
+
+.day-line {
+  margin: 0 8px;
+}
+
+.hour {
+  position: relative;
+  left: -8px;
+}
+
+.hour-end {
+  position: absolute;
+  right: 16px;
+}
+
+.cell {
+  text-align: center;
+  border-right: 1px solid black;
+
+  &:first-child {
+    border-left: 1px solid black;
+  }
+}
+
+i.main {
+  padding: 8px 0;
+  font-size: 42px;
+}
+
+i.wi-wind {
+  position: relative;
+  left: 4px;
+  font-size: 26px;
+  color: mat.get-color-from-palette($djinn-primary, 500);
+}
+
+.description {
+  overflow-x: hidden;
+}

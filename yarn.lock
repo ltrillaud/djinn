@@ -15,23 +15,23 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-devkit/architect@0.1402.7":
-  version "0.1402.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/architect/-/architect-0.1402.7.tgz#4382e9436ab541534891fc0da55512e226d86aa0"
-  integrity sha1-Q4LpQ2q1QVNIkfwNpVUS4ibYaqA=
+"@angular-devkit/architect@0.1402.10":
+  version "0.1402.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/architect/-/architect-0.1402.10.tgz#e5c552a7d9bcb90aab59964cb9b6c6ca6524e3cc"
+  integrity sha1-5cVSp9m8uQqrWZZMubbGymUk48w=
   dependencies:
-    "@angular-devkit/core" "14.2.7"
+    "@angular-devkit/core" "14.2.10"
     rxjs "6.6.7"
 
 "@angular-devkit/build-angular@^14.2.1":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/build-angular/-/build-angular-14.2.7.tgz#4a210a1be3ff83e7d5e537cddc5acbf2b6443818"
-  integrity sha1-SiEKG+P/g+fV5TfN3FrL8rZEOBg=
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/build-angular/-/build-angular-14.2.10.tgz#dfa0d85ba31a7624081145be5e1d9ca3ad07a666"
+  integrity sha1-36DYW6MadiQIEUW+Xh2co60HpmY=
   dependencies:
     "@ampproject/remapping" "2.2.0"
-    "@angular-devkit/architect" "0.1402.7"
-    "@angular-devkit/build-webpack" "0.1402.7"
-    "@angular-devkit/core" "14.2.7"
+    "@angular-devkit/architect" "0.1402.10"
+    "@angular-devkit/build-webpack" "0.1402.10"
+    "@angular-devkit/core" "14.2.10"
     "@babel/core" "7.18.10"
     "@babel/generator" "7.18.12"
     "@babel/helper-annotate-as-pure" "7.18.6"
@@ -42,7 +42,7 @@
     "@babel/runtime" "7.18.9"
     "@babel/template" "7.18.10"
     "@discoveryjs/json-ext" "0.5.7"
-    "@ngtools/webpack" "14.2.7"
+    "@ngtools/webpack" "14.2.10"
     ansi-colors "4.1.3"
     babel-loader "8.2.5"
     babel-plugin-istanbul "6.1.1"
@@ -60,7 +60,7 @@
     less "4.1.3"
     less-loader "11.0.0"
     license-webpack-plugin "4.0.2"
-    loader-utils "3.2.0"
+    loader-utils "3.2.1"
     mini-css-extract-plugin "2.6.1"
     minimatch "5.1.0"
     open "8.4.0"
@@ -93,18 +93,18 @@
   optionalDependencies:
     esbuild "0.15.5"
 
-"@angular-devkit/build-webpack@0.1402.7":
-  version "0.1402.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/build-webpack/-/build-webpack-0.1402.7.tgz#ff6794197d4ada5fec2641babc9f8c33d96427e4"
-  integrity sha1-/2eUGX1K2l/sJkG6vJ+MM9lkJ+Q=
+"@angular-devkit/build-webpack@0.1402.10":
+  version "0.1402.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/build-webpack/-/build-webpack-0.1402.10.tgz#0e23825000d1037dcc30fac0a3c29d2d531a2e72"
+  integrity sha1-DiOCUADRA33MMPrAo8KdLVMaLnI=
   dependencies:
-    "@angular-devkit/architect" "0.1402.7"
+    "@angular-devkit/architect" "0.1402.10"
     rxjs "6.6.7"
 
-"@angular-devkit/core@14.2.7":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/core/-/core-14.2.7.tgz#ab68caed4eab07ef681d80636d27f59dcb610e73"
-  integrity sha1-q2jK7U6rB+9oHYBjbSf1ncthDnM=
+"@angular-devkit/core@14.2.10":
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/core/-/core-14.2.10.tgz#9eedb7cf783030252f0c7546ce80fc321633b499"
+  integrity sha1-nu23z3gwMCUvDHVGzoD8MhYztJk=
   dependencies:
     ajv "8.11.0"
     ajv-formats "2.1.1"
@@ -112,42 +112,42 @@
     rxjs "6.6.7"
     source-map "0.7.4"
 
-"@angular-devkit/schematics@14.2.7":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/schematics/-/schematics-14.2.7.tgz#bbe64dff82c55814a16ca9bb79668fa230001340"
-  integrity sha1-u+ZN/4LFWBShbKm7eWaPojAAE0A=
+"@angular-devkit/schematics@14.2.10":
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular-devkit/schematics/-/schematics-14.2.10.tgz#91fcc85199aa7fa9a3a0cb49d8a5266421f9d5e3"
+  integrity sha1-kfzIUZmqf6mjoMtJ2KUmZCH51eM=
   dependencies:
-    "@angular-devkit/core" "14.2.7"
+    "@angular-devkit/core" "14.2.10"
     jsonc-parser "3.1.0"
     magic-string "0.26.2"
     ora "5.4.1"
     rxjs "6.6.7"
 
 "@angular/animations@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/animations/-/animations-14.2.8.tgz#749c04e621110b1df0a74d08c5433fe994c90b7c"
-  integrity sha1-dJwE5iERCx3wp00IxUM/6ZTJC3w=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/animations/-/animations-14.2.12.tgz#9ff16bad809d3ff7526f8359ef214e63e8236f9f"
+  integrity sha1-n/FrrYCdP/dSb4NZ7yFOY+gjb58=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/cdk@^14.2.5":
-  version "14.2.6"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/cdk/-/cdk-14.2.6.tgz#5d78f7eebd228b1d71910e9e3703e02bee84ddcf"
-  integrity sha1-XXj37r0iix1xkQ6eNwPgK+6E3c8=
+  version "14.2.7"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/cdk/-/cdk-14.2.7.tgz#65eb6fbbeed6120fad4e3913aa66f8b74c853ac3"
+  integrity sha1-Zetvu+7WEg+tTjkTqmb4t0yFOsM=
   dependencies:
     tslib "^2.3.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
 "@angular/cli@~14.2.1":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/cli/-/cli-14.2.7.tgz#8eebafb2f8f86bed7450f8a79191321de34d4f07"
-  integrity sha1-juuvsvj4a+10UPinkZEyHeNNTwc=
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/cli/-/cli-14.2.10.tgz#09ae3c4b5aa91fc52de95fb69f2265e350249171"
+  integrity sha1-Ca48S1qpH8Ut6V+2nyJl41AkkXE=
   dependencies:
-    "@angular-devkit/architect" "0.1402.7"
-    "@angular-devkit/core" "14.2.7"
-    "@angular-devkit/schematics" "14.2.7"
-    "@schematics/angular" "14.2.7"
+    "@angular-devkit/architect" "0.1402.10"
+    "@angular-devkit/core" "14.2.10"
+    "@angular-devkit/schematics" "14.2.10"
+    "@schematics/angular" "14.2.10"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.3"
     debug "4.3.4"
@@ -166,16 +166,16 @@
     yargs "17.5.1"
 
 "@angular/common@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/common/-/common-14.2.8.tgz#3b25df0fa40e2341184755fdc36ebca53aa78c25"
-  integrity sha1-OyXfD6QOI0EYR1X9w268pTqnjCU=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/common/-/common-14.2.12.tgz#b608ff629a635f323b297000f53f976f71ae3c80"
+  integrity sha1-tgj/YppjXzI7KXAA9T+Xb3GuPIA=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/compiler-cli@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/compiler-cli/-/compiler-cli-14.2.8.tgz#c07afda6637fc9bb8b3332ddd168550d51a5554d"
-  integrity sha1-wHr9pmN/ybuLMzLd0WhVDVGlVU0=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/compiler-cli/-/compiler-cli-14.2.12.tgz#d1653ddf72014cbb306382a22784af5432465db8"
+  integrity sha1-0WU933IBTLswY4KiJ4SvVDJGXbg=
   dependencies:
     "@babel/core" "^7.17.2"
     chokidar "^3.0.0"
@@ -189,16 +189,16 @@
     yargs "^17.2.1"
 
 "@angular/compiler@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/compiler/-/compiler-14.2.8.tgz#a091497b17bdd35fe3d5bb3e8b56810dd2a46374"
-  integrity sha1-oJFJexe901/j1bs+i1aBDdKkY3Q=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/compiler/-/compiler-14.2.12.tgz#2b17667acfb2cda1521de102246b178845838812"
+  integrity sha1-Kxdmes+yzaFSHeECJGsXiEWDiBI=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/core@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/core/-/core-14.2.8.tgz#07001f6e098a3a66363bceb0366f7a28d6fd4d21"
-  integrity sha1-BwAfbgmKOmY2O86wNm96KNb9TSE=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/core/-/core-14.2.12.tgz#118467ec4e8ea082931a84e8cefe722a0e110dc9"
+  integrity sha1-EYRn7E6OoIKTGoTozv5yKg4RDck=
   dependencies:
     tslib "^2.3.0"
 
@@ -210,37 +210,37 @@
     tslib "^2.3.0"
 
 "@angular/forms@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/forms/-/forms-14.2.8.tgz#81359be9736fc7abba5b0910e50448e42fbd77d9"
-  integrity sha1-gTWb6XNvx6u6WwkQ5QRI5C+9d9k=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/forms/-/forms-14.2.12.tgz#2174e4e3b87390b0f1ebde0b3fc6c4d2ae793a1a"
+  integrity sha1-IXTk47hzkLDx694LP8bE0q55Oho=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/material@^14.2.5":
-  version "14.2.6"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/material/-/material-14.2.6.tgz#ecaa8dd22c9970a0534bdcff741ad54fcb7f0951"
-  integrity sha1-7KqN0iyZcKBTS9z/dBrVT8t/CVE=
+  version "14.2.7"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/material/-/material-14.2.7.tgz#678c657197268eba6814c757152f8d178ff08866"
+  integrity sha1-Z4xlcZcmjrpoFMdXFS+NF4/wiGY=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/platform-browser-dynamic@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/platform-browser-dynamic/-/platform-browser-dynamic-14.2.8.tgz#bdc3c3a85f06aba1915a6e9c75e49b9adc85fa7d"
-  integrity sha1-vcPDqF8Gq6GRWm6cdeSbmtyF+n0=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/platform-browser-dynamic/-/platform-browser-dynamic-14.2.12.tgz#d4dac4a488c804ea07213a98450efa124a15d70a"
+  integrity sha1-1NrEpIjIBOoHITqYRQ76EkoV1wo=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/platform-browser@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/platform-browser/-/platform-browser-14.2.8.tgz#d1180f270aa407e94506edd470ee1665912c468c"
-  integrity sha1-0RgPJwqkB+lFBu3UcO4WZZEsRow=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/platform-browser/-/platform-browser-14.2.12.tgz#24fe6bc87d056fc8b91924091da712fef7c66457"
+  integrity sha1-JP5ryH0Fb8i5GSQJHacS/vfGZFc=
   dependencies:
     tslib "^2.3.0"
 
 "@angular/router@^14.0.0":
-  version "14.2.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/router/-/router-14.2.8.tgz#cca07d2f388f4a810664753296b9faa1f03aacda"
-  integrity sha1-zKB9LziPSoEGZHUylrn6ofA6rNo=
+  version "14.2.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@angular/router/-/router-14.2.12.tgz#f5b2c9ced3337e4a7af1905b861b114ac80a8482"
+  integrity sha1-9bLJztMzfkp68ZBbhhsRSsgKhII=
   dependencies:
     tslib "^2.3.0"
 
@@ -256,10 +256,10 @@
   dependencies:
     "@babel/highlight" "^7.18.6"
 
-"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.18.8", "@babel/compat-data@^7.19.4", "@babel/compat-data@^7.20.0":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/compat-data/-/compat-data-7.20.0.tgz#9b61938c5f688212c7b9ae363a819df7d29d4093"
-  integrity sha1-m2GTjF9oghLHua42OoGd99KdQJM=
+"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.18.8", "@babel/compat-data@^7.20.0", "@babel/compat-data@^7.20.1":
+  version "7.20.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/compat-data/-/compat-data-7.20.1.tgz#f2e6ef7790d8c8dbf03d379502dcc246dcce0b30"
+  integrity sha1-8ubvd5DYyNvwPTeVAtzCRtzOCzA=
 
 "@babel/core@7.18.10":
   version "7.18.10"
@@ -283,20 +283,20 @@
     semver "^6.3.0"
 
 "@babel/core@^7.12.3", "@babel/core@^7.17.2":
-  version "7.19.6"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/core/-/core-7.19.6.tgz#7122ae4f5c5a37c0946c066149abd8e75f81540f"
-  integrity sha1-cSKuT1xaN8CUbAZhSavY51+BVA8=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/core/-/core-7.20.2.tgz#8dc9b1620a673f92d3624bd926dc49a52cf25b92"
+  integrity sha1-jcmxYgpnP5LTYkvZJtxJpSzyW5I=
   dependencies:
     "@ampproject/remapping" "^2.1.0"
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.19.6"
-    "@babel/helper-compilation-targets" "^7.19.3"
-    "@babel/helper-module-transforms" "^7.19.6"
-    "@babel/helpers" "^7.19.4"
-    "@babel/parser" "^7.19.6"
+    "@babel/generator" "^7.20.2"
+    "@babel/helper-compilation-targets" "^7.20.0"
+    "@babel/helper-module-transforms" "^7.20.2"
+    "@babel/helpers" "^7.20.1"
+    "@babel/parser" "^7.20.2"
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.19.6"
-    "@babel/types" "^7.19.4"
+    "@babel/traverse" "^7.20.1"
+    "@babel/types" "^7.20.2"
     convert-source-map "^1.7.0"
     debug "^4.1.0"
     gensync "^1.0.0-beta.2"
@@ -312,12 +312,12 @@
     "@jridgewell/gen-mapping" "^0.3.2"
     jsesc "^2.5.1"
 
-"@babel/generator@^7.18.10", "@babel/generator@^7.19.6", "@babel/generator@^7.20.0":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/generator/-/generator-7.20.0.tgz#0bfc5379e0efb05ca6092091261fcdf7ec36249d"
-  integrity sha1-C/xTeeDvsFymCSCRJh/N9+w2JJ0=
+"@babel/generator@^7.18.10", "@babel/generator@^7.20.1", "@babel/generator@^7.20.2":
+  version "7.20.4"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/generator/-/generator-7.20.4.tgz#4d9f8f0c30be75fd90a0562099a26e5839602ab8"
+  integrity sha1-TZ+PDDC+df2QoFYgmaJuWDlgKrg=
   dependencies:
-    "@babel/types" "^7.20.0"
+    "@babel/types" "^7.20.2"
     "@jridgewell/gen-mapping" "^0.3.2"
     jsesc "^2.5.1"
 
@@ -336,7 +336,7 @@
     "@babel/helper-explode-assignable-expression" "^7.18.6"
     "@babel/types" "^7.18.9"
 
-"@babel/helper-compilation-targets@^7.17.7", "@babel/helper-compilation-targets@^7.18.9", "@babel/helper-compilation-targets@^7.19.0", "@babel/helper-compilation-targets@^7.19.3":
+"@babel/helper-compilation-targets@^7.17.7", "@babel/helper-compilation-targets@^7.18.9", "@babel/helper-compilation-targets@^7.20.0":
   version "7.20.0"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-compilation-targets/-/helper-compilation-targets-7.20.0.tgz#6bf5374d424e1b3922822f1d9bdaa43b1a139d0a"
   integrity sha1-a/U3TUJOGzkigi8dm9qkOxoTnQo=
@@ -347,16 +347,16 @@
     semver "^6.3.0"
 
 "@babel/helper-create-class-features-plugin@^7.18.6":
-  version "7.19.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.19.0.tgz#bfd6904620df4e46470bae4850d66be1054c404b"
-  integrity sha1-v9aQRiDfTkZHC65IUNZr4QVMQEs=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.20.2.tgz#3c08a5b5417c7f07b5cf3dfb6dc79cbec682e8c2"
+  integrity sha1-PAiltUF8fwe1zz37bcecvsaC6MI=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-member-expression-to-functions" "^7.18.9"
     "@babel/helper-optimise-call-expression" "^7.18.6"
-    "@babel/helper-replace-supers" "^7.18.9"
+    "@babel/helper-replace-supers" "^7.19.1"
     "@babel/helper-split-export-declaration" "^7.18.6"
 
 "@babel/helper-create-regexp-features-plugin@^7.18.6", "@babel/helper-create-regexp-features-plugin@^7.19.0":
@@ -420,19 +420,19 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.18.9", "@babel/helper-module-transforms@^7.19.6":
-  version "7.19.6"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.19.6.tgz#6c52cc3ac63b70952d33ee987cbee1c9368b533f"
-  integrity sha1-bFLMOsY7cJUtM+6YfL7hyTaLUz8=
+"@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.18.9", "@babel/helper-module-transforms@^7.19.6", "@babel/helper-module-transforms@^7.20.2":
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.20.2.tgz#ac53da669501edd37e658602a21ba14c08748712"
+  integrity sha1-rFPaZpUB7dN+ZYYCohuhTAh0hxI=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-module-imports" "^7.18.6"
-    "@babel/helper-simple-access" "^7.19.4"
+    "@babel/helper-simple-access" "^7.20.2"
     "@babel/helper-split-export-declaration" "^7.18.6"
     "@babel/helper-validator-identifier" "^7.19.1"
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.19.6"
-    "@babel/types" "^7.19.4"
+    "@babel/traverse" "^7.20.1"
+    "@babel/types" "^7.20.2"
 
 "@babel/helper-optimise-call-expression@^7.18.6":
   version "7.18.6"
@@ -441,10 +441,10 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.16.7", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.19.0", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
-  version "7.19.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-plugin-utils/-/helper-plugin-utils-7.19.0.tgz#4796bb14961521f0f8715990bee2fb6e51ce21bf"
-  integrity sha1-R5a7FJYVIfD4cVmQvuL7blHOIb8=
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.14.5", "@babel/helper-plugin-utils@^7.16.7", "@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.19.0", "@babel/helper-plugin-utils@^7.20.2", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-plugin-utils/-/helper-plugin-utils-7.20.2.tgz#d1b9000752b18d0877cff85a5c376ce5c3121629"
+  integrity sha1-0bkAB1KxjQh3z/haXDds5cMSFik=
 
 "@babel/helper-remap-async-to-generator@^7.18.6", "@babel/helper-remap-async-to-generator@^7.18.9":
   version "7.18.9"
@@ -456,7 +456,7 @@
     "@babel/helper-wrap-function" "^7.18.9"
     "@babel/types" "^7.18.9"
 
-"@babel/helper-replace-supers@^7.18.6", "@babel/helper-replace-supers@^7.18.9":
+"@babel/helper-replace-supers@^7.18.6", "@babel/helper-replace-supers@^7.19.1":
   version "7.19.1"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-replace-supers/-/helper-replace-supers-7.19.1.tgz#e1592a9b4b368aa6bdb8784a711e0bcbf0612b78"
   integrity sha1-4Vkqm0s2iqa9uHhKcR4Ly/BhK3g=
@@ -467,12 +467,12 @@
     "@babel/traverse" "^7.19.1"
     "@babel/types" "^7.19.0"
 
-"@babel/helper-simple-access@^7.19.4":
-  version "7.19.4"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-simple-access/-/helper-simple-access-7.19.4.tgz#be553f4951ac6352df2567f7daa19a0ee15668e7"
-  integrity sha1-vlU/SVGsY1LfJWf32qGaDuFWaOc=
+"@babel/helper-simple-access@^7.19.4", "@babel/helper-simple-access@^7.20.2":
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helper-simple-access/-/helper-simple-access-7.20.2.tgz#0ab452687fe0c2cfb1e2b9e0015de07fc2d62dd9"
+  integrity sha1-CrRSaH/gws+x4rngAV3gf8LWLdk=
   dependencies:
-    "@babel/types" "^7.19.4"
+    "@babel/types" "^7.20.2"
 
 "@babel/helper-skip-transparent-expression-wrappers@^7.18.9":
   version "7.20.0"
@@ -513,13 +513,13 @@
     "@babel/traverse" "^7.19.0"
     "@babel/types" "^7.19.0"
 
-"@babel/helpers@^7.18.9", "@babel/helpers@^7.19.4":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helpers/-/helpers-7.20.0.tgz#27c8ffa8cc32a2ed3762fba48886e7654dbcf77f"
-  integrity sha1-J8j/qMwyou03YvukiIbnZU28938=
+"@babel/helpers@^7.18.9", "@babel/helpers@^7.20.1":
+  version "7.20.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/helpers/-/helpers-7.20.1.tgz#2ab7a0fcb0a03b5bf76629196ed63c2d7311f4c9"
+  integrity sha1-Kreg/LCgO1v3ZikZbtY8LXMR9Mk=
   dependencies:
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.20.0"
+    "@babel/traverse" "^7.20.1"
     "@babel/types" "^7.20.0"
 
 "@babel/highlight@^7.18.6":
@@ -531,10 +531,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.19.6", "@babel/parser@^7.20.0":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/parser/-/parser-7.20.0.tgz#b26133c888da4d79b0d3edcf42677bcadc783046"
-  integrity sha1-smEzyIjaTXmw0+3PQmd7ytx4MEY=
+"@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.20.1", "@babel/parser@^7.20.2":
+  version "7.20.3"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/parser/-/parser-7.20.3.tgz#5358cf62e380cf69efcb87a7bb922ff88bfac6e2"
+  integrity sha1-U1jPYuOAz2nvy4enu5Iv+Iv6xuI=
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.18.6":
   version "7.18.6"
@@ -563,9 +563,9 @@
     "@babel/plugin-syntax-async-generators" "^7.8.4"
 
 "@babel/plugin-proposal-async-generator-functions@^7.18.10":
-  version "7.19.1"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.19.1.tgz#34f6f5174b688529342288cd264f80c9ea9fb4a7"
-  integrity sha1-NPb1F0tohSk0IojNJk+AyeqftKc=
+  version "7.20.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.20.1.tgz#352f02baa5d69f4e7529bdac39aaa02d41146af9"
+  integrity sha1-NS8CuqXWn051Kb2sOaqgLUEUavk=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-plugin-utils" "^7.19.0"
@@ -638,15 +638,15 @@
     "@babel/plugin-syntax-numeric-separator" "^7.10.4"
 
 "@babel/plugin-proposal-object-rest-spread@^7.18.9":
-  version "7.19.4"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.19.4.tgz#a8fc86e8180ff57290c91a75d83fe658189b642d"
-  integrity sha1-qPyG6BgP9XKQyRp12D/mWBibZC0=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.20.2.tgz#a556f59d555f06961df1e572bb5eca864c84022d"
+  integrity sha1-pVb1nVVfBpYd8eVyu17KhkyEAi0=
   dependencies:
-    "@babel/compat-data" "^7.19.4"
-    "@babel/helper-compilation-targets" "^7.19.3"
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/compat-data" "^7.20.1"
+    "@babel/helper-compilation-targets" "^7.20.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
-    "@babel/plugin-transform-parameters" "^7.18.8"
+    "@babel/plugin-transform-parameters" "^7.20.1"
 
 "@babel/plugin-proposal-optional-catch-binding@^7.18.6":
   version "7.18.6"
@@ -820,24 +820,24 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-block-scoping@^7.18.9":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.20.0.tgz#91fe5e6ffc9ba13cb6c95ed7f0b1204f68c988c5"
-  integrity sha1-kf5eb/yboTy2yV7X8LEgT2jJiMU=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.20.2.tgz#f59b1767e6385c663fd0bce655db6ca9c8b236ed"
+  integrity sha1-9ZsXZ+Y4XGY/0LzmVdtsqciyNu0=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-classes@^7.18.9":
-  version "7.19.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-classes/-/plugin-transform-classes-7.19.0.tgz#0e61ec257fba409c41372175e7c1e606dc79bb20"
-  integrity sha1-DmHsJX+6QJxBNyF158HmBtx5uyA=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-classes/-/plugin-transform-classes-7.20.2.tgz#c0033cf1916ccf78202d04be4281d161f6709bb2"
+  integrity sha1-wAM88ZFsz3ggLQS+QoHRYfZwm7I=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
-    "@babel/helper-compilation-targets" "^7.19.0"
+    "@babel/helper-compilation-targets" "^7.20.0"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-optimise-call-expression" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.19.0"
-    "@babel/helper-replace-supers" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-replace-supers" "^7.19.1"
     "@babel/helper-split-export-declaration" "^7.18.6"
     globals "^11.1.0"
 
@@ -849,11 +849,11 @@
     "@babel/helper-plugin-utils" "^7.18.9"
 
 "@babel/plugin-transform-destructuring@^7.18.9":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.20.0.tgz#712829ef4825d9cc04bb379de316f981e9a6f648"
-  integrity sha1-cSgp70gl2cwEuzed4xb5gemm9kg=
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.20.2.tgz#c23741cfa44ddd35f5e53896e88c75331b8b2792"
+  integrity sha1-wjdBz6RN3TX15TiW6Ix1MxuLJ5I=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-dotall-regex@^7.18.6", "@babel/plugin-transform-dotall-regex@^7.4.4":
   version "7.18.6"
@@ -966,12 +966,12 @@
     "@babel/helper-plugin-utils" "^7.18.6"
     "@babel/helper-replace-supers" "^7.18.6"
 
-"@babel/plugin-transform-parameters@^7.18.8":
-  version "7.18.8"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.18.8.tgz#ee9f1a0ce6d78af58d0956a9378ea3427cccb48a"
-  integrity sha1-7p8aDObXivWNCVapN46jQnzMtIo=
+"@babel/plugin-transform-parameters@^7.18.8", "@babel/plugin-transform-parameters@^7.20.1":
+  version "7.20.3"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.20.3.tgz#7b3468d70c3c5b62e46be0a47b6045d8590fb748"
+  integrity sha1-ezRo1ww8W2Lka+Cke2BF2FkPt0g=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.6"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-property-literals@^7.18.6":
   version "7.18.6"
@@ -1158,9 +1158,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.8.4":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/runtime/-/runtime-7.20.0.tgz#824a9ef325ffde6f78056059db3168c08785e24a"
-  integrity sha1-gkqe8yX/3m94BWBZ2zFowIeF4ko=
+  version "7.20.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/runtime/-/runtime-7.20.1.tgz#1148bb33ab252b165a06698fde7576092a78b4a9"
+  integrity sha1-EUi7M6slKxZaBmmP3nV2CSp4tKk=
   dependencies:
     regenerator-runtime "^0.13.10"
 
@@ -1173,26 +1173,26 @@
     "@babel/parser" "^7.18.10"
     "@babel/types" "^7.18.10"
 
-"@babel/traverse@^7.18.10", "@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.19.6", "@babel/traverse@^7.20.0":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/traverse/-/traverse-7.20.0.tgz#538c4c6ce6255f5666eba02252a7b59fc2d5ed98"
-  integrity sha1-U4xMbOYlX1Zm66AiUqe1n8LV7Zg=
+"@babel/traverse@^7.18.10", "@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.20.1":
+  version "7.20.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/traverse/-/traverse-7.20.1.tgz#9b15ccbf882f6d107eeeecf263fbcdd208777ec8"
+  integrity sha1-mxXMv4gvbRB+7uzyY/vN0gh3fsg=
   dependencies:
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.20.0"
+    "@babel/generator" "^7.20.1"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-hoist-variables" "^7.18.6"
     "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/parser" "^7.20.0"
+    "@babel/parser" "^7.20.1"
     "@babel/types" "^7.20.0"
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.19.4", "@babel/types@^7.20.0", "@babel/types@^7.4.4":
-  version "7.20.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/types/-/types-7.20.0.tgz#52c94cf8a7e24e89d2a194c25c35b17a64871479"
-  integrity sha1-UslM+KfiTonSoZTCXDWxemSHFHk=
+"@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.20.0", "@babel/types@^7.20.2", "@babel/types@^7.4.4":
+  version "7.20.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@babel/types/-/types-7.20.2.tgz#67ac09266606190f496322dbaff360fdaa5e7842"
+  integrity sha1-Z6wJJmYGGQ9JYyLbr/Ng/apeeEI=
   dependencies:
     "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
@@ -1398,10 +1398,10 @@
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha1-sqxibWy5yHGKtFkWbUu0Bbj/p4s=
 
-"@ngtools/webpack@14.2.7":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@ngtools/webpack/-/webpack-14.2.7.tgz#68d4ffa72693d7bd34b3db3c92ce683936f81995"
-  integrity sha1-aNT/pyaT1700s9s8ks5oOTb4GZU=
+"@ngtools/webpack@14.2.10":
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@ngtools/webpack/-/webpack-14.2.10.tgz#d33ff1147d01bd1f5d936a3d1744c81a28e2ca6a"
+  integrity sha1-0z/xFH0BvR9dk2o9F0TIGijiymo=
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1486,13 +1486,13 @@
     read-package-json-fast "^2.0.3"
     which "^2.0.2"
 
-"@schematics/angular@14.2.7":
-  version "14.2.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@schematics/angular/-/angular-14.2.7.tgz#0ea7ffbafe268d7a3283fdcd2cd7d21ac5f7b9b2"
-  integrity sha1-Dqf/uv4mjXoyg/3NLNfSGsX3ubI=
+"@schematics/angular@14.2.10":
+  version "14.2.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@schematics/angular/-/angular-14.2.10.tgz#676b045ea647e8908ade169ebb688e40b158ca83"
+  integrity sha1-Z2sEXqZH6JCK3haeu2iOQLFYyoM=
   dependencies:
-    "@angular-devkit/core" "14.2.7"
-    "@angular-devkit/schematics" "14.2.7"
+    "@angular-devkit/core" "14.2.10"
+    "@angular-devkit/schematics" "14.2.10"
     jsonc-parser "3.1.0"
 
 "@socket.io/component-emitter@~3.1.0":
@@ -1554,9 +1554,9 @@
     "@types/estree" "*"
 
 "@types/eslint@*":
-  version "8.4.9"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@types/eslint/-/eslint-8.4.9.tgz#f7371980148697f4b582b086630319b55324b5aa"
-  integrity sha1-9zcZgBSGl/S1grCGYwMZtVMktao=
+  version "8.4.10"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@types/eslint/-/eslint-8.4.10.tgz#19731b9685c19ed1552da7052b6f668ed7eb64bb"
+  integrity sha1-GXMbloXBntFVLacFK29mjtfrZLs=
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -1630,9 +1630,9 @@
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
 
 "@types/node@*", "@types/node@>=10.0.0":
-  version "18.11.7"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@types/node/-/node-18.11.7.tgz#8ccef136f240770c1379d50100796a6952f01f94"
-  integrity sha1-jM7xNvJAdwwTedUBAHlqaVLwH5Q=
+  version "18.11.9"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
+  integrity sha1-AtAT3nBYzqFtNhaO8vxlNGTPutQ=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1916,7 +1916,7 @@ ajv-keywords@^5.0.0:
   dependencies:
     fast-deep-equal "^3.1.3"
 
-ajv@8.11.0, ajv@^8.0.0, ajv@^8.8.0:
+ajv@8.11.0:
   version "8.11.0"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/ajv/-/ajv-8.11.0.tgz#977e91dd96ca669f54a11e23e378e33b884a565f"
   integrity sha1-l36R3ZbKZp9UoR4j43jjO4hKVl8=
@@ -1934,6 +1934,16 @@ ajv@^6.12.4, ajv@^6.12.5:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@^8.0.0, ajv@^8.8.0:
+  version "8.11.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/ajv/-/ajv-8.11.2.tgz#aecb20b50607acf2569b6382167b65a96008bb78"
+  integrity sha1-rssgtQYHrPJWm2OCFntlqWAIu3g=
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
 ansi-colors@4.1.3:
@@ -1973,9 +1983,9 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
     color-convert "^2.0.1"
 
 anymatch@~3.1.2:
-  version "3.1.2"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
-  integrity sha1-wFV8CWrzLxBhmPT04qODU343hxY=
+  version "3.1.3"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/anymatch/-/anymatch-3.1.3.tgz#790c58b19ba1720a84205b57c618d5ad8524973e"
+  integrity sha1-eQxYsZuhcgqEIFtXxhjVrYUklz4=
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
@@ -2287,9 +2297,9 @@ camelcase@^5.3.1:
   integrity sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA=
 
 caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
-  version "1.0.30001427"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001427.tgz#d3a749f74be7ae0671fbec3a4eea18576e8ad646"
-  integrity sha1-06dJ90vnrgZx++w6TuoYV26K1kY=
+  version "1.0.30001434"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001434.tgz#ec1ec1cfb0a93a34a0600d37903853030520a4e5"
+  integrity sha1-7B7Bz7CpOjSgYA03kDhTAwUgpOU=
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -2714,9 +2724,9 @@ copy-webpack-plugin@11.0.0:
     serialize-javascript "^6.0.0"
 
 core-js-compat@^3.21.0, core-js-compat@^3.22.1:
-  version "3.26.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/core-js-compat/-/core-js-compat-3.26.0.tgz#94e2cf8ba3e63800c4956ea298a6473bc9d62b44"
-  integrity sha1-lOLPi6PmOADElW6imKZHO8nWK0Q=
+  version "3.26.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/core-js-compat/-/core-js-compat-3.26.1.tgz#0e710b09ebf689d719545ac36e49041850f943df"
+  integrity sha1-DnELCev2idcZVFrDbkkEGFD5Q98=
   dependencies:
     browserslist "^4.21.4"
 
@@ -2734,9 +2744,9 @@ cors@~2.8.5:
     vary "^1"
 
 cosmiconfig@^7.0.0:
-  version "7.0.1"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/cosmiconfig/-/cosmiconfig-7.0.1.tgz#714d756522cace867867ccb4474c5d01bbae5d6d"
-  integrity sha1-cU11ZSLKzoZ4Z8y0R0xdAbuuXW0=
+  version "7.1.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/cosmiconfig/-/cosmiconfig-7.1.0.tgz#1443b9afa596b670082ea46cbd8f6a62b84635f6"
+  integrity sha1-FEO5r6WWtnAILqRsvY9qYrhGNfY=
   dependencies:
     "@types/parse-json" "^4.0.0"
     import-fresh "^3.2.1"
@@ -2815,9 +2825,9 @@ css-what@^6.0.1:
   integrity sha1-+17/z3bx3eosgb36pN5E55uscPQ=
 
 cssdb@^7.0.0:
-  version "7.0.2"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/cssdb/-/cssdb-7.0.2.tgz#e1cadfe2be318797bd02ca929d2b3c7bac332abc"
-  integrity sha1-4crf4r4xh5e9AsqSnSs8e6wzKrw=
+  version "7.1.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/cssdb/-/cssdb-7.1.0.tgz#574f97235a83eb753a29f0b1f2cbacac0d628bb8"
+  integrity sha1-V0+XI1qD63U6KfCx8susrA1ii7g=
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -3053,10 +3063,10 @@ engine.io-parser@~5.0.3:
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/engine.io-parser/-/engine.io-parser-5.0.4.tgz#0b13f704fa9271b3ec4f33112410d8f3f41d0fc0"
   integrity sha1-CxP3BPqScbPsTzMRJBDY8/QdD8A=
 
-engine.io@~6.2.0:
-  version "6.2.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/engine.io/-/engine.io-6.2.0.tgz#003bec48f6815926f2b1b17873e576acd54f41d0"
-  integrity sha1-ADvsSPaBWSbysbF4c+V2rNVPQdA=
+engine.io@~6.2.1:
+  version "6.2.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/engine.io/-/engine.io-6.2.1.tgz#e3f7826ebc4140db9bbaa9021ad6b1efb175878f"
+  integrity sha1-4/eCbrxBQNubuqkCGtax77F1h48=
   dependencies:
     "@types/cookie" "^0.4.1"
     "@types/cors" "^2.8.12"
@@ -3070,9 +3080,9 @@ engine.io@~6.2.0:
     ws "~8.2.3"
 
 enhanced-resolve@^5.10.0:
-  version "5.10.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/enhanced-resolve/-/enhanced-resolve-5.10.0.tgz#0dc579c3bb2a1032e357ac45b8f3a6f3ad4fb1e6"
-  integrity sha1-DcV5w7sqEDLjV6xFuPOm861PseY=
+  version "5.12.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/enhanced-resolve/-/enhanced-resolve-5.12.0.tgz#300e1c90228f5b570c4d35babf263f6da7155634"
+  integrity sha1-MA4ckCKPW1cMTTW6vyY/bacVVjQ=
   dependencies:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
@@ -4293,9 +4303,9 @@ jsonparse@^1.2.0, jsonparse@^1.3.1:
   integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
 
 jsrsasign@^10.6.0:
-  version "10.6.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/jsrsasign/-/jsrsasign-10.6.0.tgz#9b6c5caa27fa91d770de5537ec842219a96f492c"
-  integrity sha1-m2xcqif6kddw3lU37IQiGalvSSw=
+  version "10.6.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/jsrsasign/-/jsrsasign-10.6.1.tgz#dcdfa890241f4cb72e717116f95b5ba9315bfda0"
+  integrity sha1-3N+okCQfTLcucXEW+VtbqTFb/aA=
 
 karma-chrome-launcher@~3.1.0:
   version "3.1.1"
@@ -4373,9 +4383,9 @@ keycloak-angular@^12.1.0:
     tslib "^2.3.0"
 
 keycloak-js@*, keycloak-js@^20.0.0:
-  version "20.0.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/keycloak-js/-/keycloak-js-20.0.0.tgz#5026c0fdf4b01119e9259b70a289d0300d9615ec"
-  integrity sha1-UCbA/fSwERnpJZtwoonQMA2WFew=
+  version "20.0.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/keycloak-js/-/keycloak-js-20.0.1.tgz#3f73499a6b071d096f82ab74257b1b7429f53c8c"
+  integrity sha1-P3NJmmsHHQlvgqt0JXsbdCn1PIw=
   dependencies:
     base64-js "^1.5.1"
     js-sha256 "^0.9.0"
@@ -4441,15 +4451,15 @@ loader-runner@^4.2.0:
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/loader-runner/-/loader-runner-4.3.0.tgz#c1b4a163b99f614830353b16755e7149ac2314e1"
   integrity sha1-wbShY7mfYUgwNTsWdV5xSawjFOE=
 
-loader-utils@3.2.0:
-  version "3.2.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/loader-utils/-/loader-utils-3.2.0.tgz#bcecc51a7898bee7473d4bc6b845b23af8304d4f"
-  integrity sha1-vOzFGniYvudHPUvGuEWyOvgwTU8=
+loader-utils@3.2.1:
+  version "3.2.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/loader-utils/-/loader-utils-3.2.1.tgz#4fb104b599daafd82ef3e1a41fb9265f87e1f576"
+  integrity sha1-T7EEtZnar9gu8+GkH7kmX4fh9XY=
 
 loader-utils@^2.0.0:
-  version "2.0.3"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/loader-utils/-/loader-utils-2.0.3.tgz#d4b15b8504c63d1fc3f2ade52d41bc8459d6ede1"
-  integrity sha1-1LFbhQTGPR/D8q3lLUG8hFnW7eE=
+  version "2.0.4"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
+  integrity sha1-i1yzi1w0qaAY7h/A5qBm0d/MUow=
   dependencies:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
@@ -4527,9 +4537,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
-  version "7.14.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/lru-cache/-/lru-cache-7.14.0.tgz#21be64954a4680e303a09e9468f880b98a0b3c7f"
-  integrity sha1-Ib5klUpGgOMDoJ6UaPiAuYoLPH8=
+  version "7.14.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/lru-cache/-/lru-cache-7.14.1.tgz#8da8d2f5f59827edb388e63e459ac23d6d408fea"
+  integrity sha1-jajS9fWYJ+2ziOY+RZrCPW1Aj+o=
 
 magic-string@0.26.2:
   version "0.26.2"
@@ -4598,9 +4608,9 @@ media-typer@0.3.0:
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
 memfs@^3.4.3:
-  version "3.4.9"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/memfs/-/memfs-3.4.9.tgz#403bb953776d72fef4e39e1197a25ffa156d143a"
-  integrity sha1-QDu5U3dtcv70454Rl6Jf+hVtFDo=
+  version "3.4.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/memfs/-/memfs-3.4.12.tgz#d00f8ad8dab132dc277c659dc85bfd14b07d03bd"
+  integrity sha1-0A+K2NqxMtwnfGWdyFv9FLB9A70=
   dependencies:
     fs-monkey "^1.0.3"
 
@@ -4769,9 +4779,9 @@ minipass-sized@^1.0.3:
     minipass "^3.0.0"
 
 minipass@^3.0.0, minipass@^3.1.1, minipass@^3.1.6:
-  version "3.3.4"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/minipass/-/minipass-3.3.4.tgz#ca99f95dd77c43c7a76bf51e6d200025eee0ffae"
-  integrity sha1-ypn5Xdd8Q8ena/UebSAAJe7g/64=
+  version "3.3.6"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/minipass/-/minipass-3.3.6.tgz#7bba384db3a1520d18c9c0e5251c3444e95dd94a"
+  integrity sha1-e7o4TbOhUg0YycDlJRw0ROld2Uo=
   dependencies:
     yallist "^4.0.0"
 
@@ -4834,9 +4844,9 @@ nanoid@^3.3.4:
   integrity sha1-cwtn480J4t6s8DwCfIHJ2dvF6Ks=
 
 needle@^3.1.0:
-  version "3.1.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/needle/-/needle-3.1.0.tgz#3bf5cd090c28eb15644181ab6699e027bd6c53c9"
-  integrity sha1-O/XNCQwo6xVkQYGrZpngJ71sU8k=
+  version "3.2.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/needle/-/needle-3.2.0.tgz#07d240ebcabfd65c76c03afae7f6defe6469df44"
+  integrity sha1-B9JA68q/1lx2wDr65/be/mRp30Q=
   dependencies:
     debug "^3.2.6"
     iconv-lite "^0.6.3"
@@ -5681,9 +5691,9 @@ postcss-selector-not@^6.0.1:
     postcss-selector-parser "^6.0.10"
 
 postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.9:
-  version "6.0.10"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/postcss-selector-parser/-/postcss-selector-parser-6.0.10.tgz#79b61e2c0d1bfc2602d549e11d0876256f8df88d"
-  integrity sha1-ebYeLA0b/CYC1UnhHQh2JW+N+I0=
+  version "6.0.11"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz#2e41dc39b7ad74046e1615185185cd0b17d0c8dc"
+  integrity sha1-LkHcObetdARuFhUYUYXNCxfQyNw=
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
@@ -5703,9 +5713,9 @@ postcss@8.4.16:
     source-map-js "^1.0.2"
 
 postcss@^8.2.14, postcss@^8.3.7, postcss@^8.4.7:
-  version "8.4.18"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
-  integrity sha1-bVAEbqfT1mqF4OeCB05yA7x/vKI=
+  version "8.4.19"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/postcss/-/postcss-8.4.19.tgz#61178e2add236b17351897c8bcc0b4c8ecab56fc"
+  integrity sha1-YReOKt0jaxc1GJfIvMC0yOyrVvw=
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
@@ -5927,14 +5937,14 @@ regenerator-runtime@0.13.9:
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
 
 regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.4:
-  version "0.13.10"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
-  integrity sha1-7Qexlha8vsXaYnTrx1rpVjS/wu4=
+  version "0.13.11"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha1-9tyj587sIFkNB62nhWNqkM3KF/k=
 
 regenerator-transform@^0.15.0:
-  version "0.15.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regenerator-transform/-/regenerator-transform-0.15.0.tgz#cbd9ead5d77fae1a48d957cf889ad0586adb6537"
-  integrity sha1-y9nq1dd/rhpI2VfPiJrQWGrbZTc=
+  version "0.15.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regenerator-transform/-/regenerator-transform-0.15.1.tgz#f6c4e99fc1b4591f780db2586328e4d9a9d8dc56"
+  integrity sha1-9sTpn8G0WR94DbJYYyjk2anY3FY=
   dependencies:
     "@babel/runtime" "^7.8.4"
 
@@ -5944,16 +5954,16 @@ regex-parser@^2.2.11:
   integrity sha1-OzfskEnhlHmAboeMq+fByoPM/lg=
 
 regexpu-core@^5.1.0:
-  version "5.2.1"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regexpu-core/-/regexpu-core-5.2.1.tgz#a69c26f324c1e962e9ffd0b88b055caba8089139"
-  integrity sha1-ppwm8yTB6WLp/9C4iwVcq6gIkTk=
+  version "5.2.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/regexpu-core/-/regexpu-core-5.2.2.tgz#3e4e5d12103b64748711c3aad69934d7718e75fc"
+  integrity sha1-Pk5dEhA7ZHSHEcOq1pk013GOdfw=
   dependencies:
     regenerate "^1.4.2"
     regenerate-unicode-properties "^10.1.0"
     regjsgen "^0.7.1"
     regjsparser "^0.9.1"
     unicode-match-property-ecmascript "^2.0.0"
-    unicode-match-property-value-ecmascript "^2.0.0"
+    unicode-match-property-value-ecmascript "^2.1.0"
 
 regjsgen@^0.7.1:
   version "0.7.1"
@@ -6286,7 +6296,7 @@ socket.io-adapter@~2.4.0:
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/socket.io-adapter/-/socket.io-adapter-2.4.0.tgz#b50a4a9ecdd00c34d4c8c808224daa1a786152a6"
   integrity sha1-tQpKns3QDDTUyMgIIk2qGnhhUqY=
 
-socket.io-parser@~4.2.0:
+socket.io-parser@~4.2.1:
   version "4.2.1"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/socket.io-parser/-/socket.io-parser-4.2.1.tgz#01c96efa11ded938dcb21cbe590c26af5eff65e5"
   integrity sha1-Aclu+hHe2Tjcshy+WQwmr17/ZeU=
@@ -6295,16 +6305,16 @@ socket.io-parser@~4.2.0:
     debug "~4.3.1"
 
 socket.io@^4.4.1:
-  version "4.5.3"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/socket.io/-/socket.io-4.5.3.tgz#44dffea48d7f5aa41df4a66377c386b953bc521c"
-  integrity sha1-RN/+pI1/WqQd9KZjd8OGuVO8Uhw=
+  version "4.5.4"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/socket.io/-/socket.io-4.5.4.tgz#a4513f06e87451c17013b8d13fdfaf8da5a86a90"
+  integrity sha1-pFE/Buh0UcFwE7jRP9+vjaWoapA=
   dependencies:
     accepts "~1.3.4"
     base64id "~2.0.0"
     debug "~4.3.2"
-    engine.io "~6.2.0"
+    engine.io "~6.2.1"
     socket.io-adapter "~2.4.0"
-    socket.io-parser "~4.2.0"
+    socket.io-parser "~4.2.1"
 
 sockjs@^0.3.24:
   version "0.3.24"
@@ -6592,9 +6602,9 @@ tapable@^2.1.1, tapable@^2.2.0:
   integrity sha1-GWenPvQGCoLxKrlq+G1S/bdu7KA=
 
 tar@^6.1.11, tar@^6.1.2:
-  version "6.1.11"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
-  integrity sha1-Z2CjjwA6+hsv/Q/+npq70Oqz1iE=
+  version "6.1.12"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/tar/-/tar-6.1.12.tgz#3b742fb05669b55671fb769ab67a7791ea1a62e6"
+  integrity sha1-O3QvsFZptVZx+3aatnp3keoaYuY=
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
@@ -6625,9 +6635,9 @@ terser@5.14.2:
     source-map-support "~0.5.20"
 
 terser@^5.14.1:
-  version "5.15.1"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/terser/-/terser-5.15.1.tgz#8561af6e0fd6d839669c73b92bdd5777d870ed6c"
-  integrity sha1-hWGvbg/W2DlmnHO5K91Xd9hw7Ww=
+  version "5.16.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/terser/-/terser-5.16.0.tgz#29362c6f5506e71545c73b069ccd199bb28f7f54"
+  integrity sha1-KTYsb1UG5xVFxzsGnM0Zm7KPf1Q=
   dependencies:
     "@jridgewell/source-map" "^0.3.2"
     acorn "^8.5.0"
@@ -6719,7 +6729,7 @@ trim-newlines@^3.0.0:
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
   integrity sha1-Jgpdli2LdSQlsy86fbDcrNF2wUQ=
 
-tslib@2.4.0, tslib@^2.1.0, tslib@^2.3.0:
+tslib@2.4.0:
   version "2.4.0"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha1-fOyqfwc85oCgWEeqd76UEJjzbcM=
@@ -6728,6 +6738,11 @@ tslib@^1.9.0:
   version "1.14.1"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
+
+tslib@^2.1.0, tslib@^2.3.0:
+  version "2.4.1"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
+  integrity sha1-DQv7qsKIC5HiLfB2jlW+l1OlsX4=
 
 type-fest@^0.18.0:
   version "0.18.1"
@@ -6795,10 +6810,10 @@ unicode-match-property-ecmascript@^2.0.0:
     unicode-canonical-property-names-ecmascript "^2.0.0"
     unicode-property-aliases-ecmascript "^2.0.0"
 
-unicode-match-property-value-ecmascript@^2.0.0:
-  version "2.0.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-2.0.0.tgz#1a01aa57247c14c568b89775a54938788189a714"
-  integrity sha1-GgGqVyR8FMVouJd1pUk4eIGJpxQ=
+unicode-match-property-value-ecmascript@^2.1.0:
+  version "2.1.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/unicode-match-property-value-ecmascript/-/unicode-match-property-value-ecmascript-2.1.0.tgz#cb5fffdcd16a05124f5a4b0bf7c3770208acbbe0"
+  integrity sha1-y1//3NFqBRJPWksL98N3Agisu+A=
 
 unicode-property-aliases-ecmascript@^2.0.0:
   version "2.1.0"
@@ -7076,9 +7091,9 @@ wrappy@1:
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
 ws@^8.4.2:
-  version "8.10.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/ws/-/ws-8.10.0.tgz#00a28c09dfb76eae4eb45c3b565f771d6951aa51"
-  integrity sha1-AKKMCd+3bq5OtFw7Vl93HWlRqlE=
+  version "8.11.0"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
+  integrity sha1-ag02uO39n5bYslaD2y+Nfebo4UM=
 
 ws@~8.2.3:
   version "8.2.3"
@@ -7110,7 +7125,7 @@ yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
   integrity sha1-LrfcOwKJcY/ClfNidThFxBoMlO4=
 
-yargs-parser@^21.0.0:
+yargs-parser@^21.0.0, yargs-parser@^21.1.1:
   version "21.1.1"
   resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
   integrity sha1-kJa87r+ZDSG7MfqVFuDt4pSnfTU=
@@ -7142,9 +7157,9 @@ yargs@^16.0.0, yargs@^16.1.1, yargs@^16.2.0:
     yargs-parser "^20.2.2"
 
 yargs@^17.2.1:
-  version "17.6.0"
-  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/yargs/-/yargs-17.6.0.tgz#e134900fc1f218bc230192bdec06a0a5f973e46c"
-  integrity sha1-4TSQD8HyGLwjAZK97Aagpflz5Gw=
+  version "17.6.2"
+  resolved "https://pkgs.dev.azure.com/Jean-PierreRAYSZ/doclab/_packaging/Main_Feed/npm/registry/yargs/-/yargs-17.6.2.tgz#2e23f2944e976339a1ee00f18c77fedee8332541"
+  integrity sha1-LiPylE6XYzmh7gDxjHf+3ugzJUE=
   dependencies:
     cliui "^8.0.1"
     escalade "^3.1.1"
@@ -7152,7 +7167,7 @@ yargs@^17.2.1:
     require-directory "^2.1.1"
     string-width "^4.2.3"
     y18n "^5.0.5"
-    yargs-parser "^21.0.0"
+    yargs-parser "^21.1.1"
 
 yocto-queue@^0.1.0:
   version "0.1.0"
