@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/ltrillaud/djinn/compare/v1.2.0...v1.2.1) (2022-12-11)
+
+
+### Bug Fixes
+
+* **app:** update main menu ([3eae0fa](https://github.com/ltrillaud/djinn/commit/3eae0fab54c7ebee15ce922b42f3c80ceb3eaaab))
+
 ## [1.2.0](https://github.com/ltrillaud/djinn/compare/v1.1.0...v1.2.0) (2022-12-11)
 
 
