@@ -43,20 +43,69 @@
         </div>
       </div>
     </div>
+  </div>
 
-  </div>
-  <div fxLayout="row" fxFlexAlign="center center">
-    <span>Temperature du toit </span>
-    <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
-    <div *ngIf="appliancesService.appliances['X1'].temperature">
-      {{appliancesService.appliances['X1'].temperature}}
-    </div>
-  </div>
-  <div fxLayout="row" fxFlexAlign="center center">
-    <span>Temperature du puit</span>
-    <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
-    <div *ngIf="appliancesService.appliances['G1'].aplRes[0]">
-      {{ appliancesService.appliances['G1'].aplRes[0].devices['G1PT'].value.toString().padStart(2, '0') }}
-    </div>
-  </div>
+  <mat-list>
+    <mat-list-item class="mat-elevation-z2">
+      <div matLine class="line1">
+        <div fxFlex>
+          <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
+            <div>Température</div>
+            <div>Extérieur sur le toit</div>
+          </div>
+          <div fxFlex></div>
+          <div class="right" fxLayout="row" fxFlexAlign="center center">
+            <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+            <div *ngIf="appliancesService.appliances['X1'].temperature">
+              {{appliancesService.appliances['X1'].temperature}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item class="mat-elevation-z2">
+      <div matLine class="line1">
+        <div fxFlex>
+          <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
+            <div>Température</div>
+            <div>En sortie du puit</div>
+          </div>
+          <div fxFlex></div>
+          <div class="right" fxLayout="row" fxFlexAlign="center center">
+            <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+            <div *ngIf="appliancesService.appliances['G1'].aplRes[0]">
+              {{
+              parseFloat(appliancesService.appliances['G1'].aplRes[0].devices['G1PT'].value).toFixed(1).toString().padStart(4,
+              '0') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item class="mat-elevation-z2">
+      <div matLine class="line1">
+        <div fxFlex>
+          <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
+            <div>Température</div>
+            <div>En sortie de la VMC</div>
+          </div>
+          <div fxFlex></div>
+          <div class="right" fxLayout="row" fxFlexAlign="center center">
+            <mat-icon fontSet="material-symbols-outlined" color="primary">thermostat</mat-icon>
+            <div *ngIf="appliancesService.appliances['G1'].aplRes[0]">
+              {{
+              parseFloat(appliancesService.appliances['G1'].aplRes[0].devices['G1IT'].value).toFixed(1).toString().padStart(4,
+              '0') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+
+
+
 </div>

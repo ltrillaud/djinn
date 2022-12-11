@@ -273,17 +273,17 @@ export class AuthService {
   triggerRefreshForDirect(): void {
     // setup auto jwt refresh
     const interval = this.user.authOutput!.expires_in || 60
-    console.log(`        authServ.ts triggerRefreshForKeycloak arm interval(${interval}) secs`)
+    console.log(`        authServ.ts triggerRefreshForDirect arm interval(${interval}) secs`)
     this.intervalHandle = setInterval(async () => {
       try {
         const offlineToken = localStorage.getItem('offline-token')
-        this.keycloakRefresh(this.user.authConfig!, offlineToken!)
+        this.user = await this.keycloakRefresh(this.user.authConfig!, offlineToken!)
         this.onLogin.next({ action: 'refresh', user: this.user })
       } catch (error) {
-        console.log(`        authServ.ts triggerRefreshForKeycloak failed`, error)
+        console.log(`        authServ.ts triggerRefreshForDirect failed`, error)
       } finally {
         const now = new Date().toISOString()
-        console.log(`        authServ.ts triggerRefreshForKeycloak(true) @ ${now}`)
+        console.log(`        authServ.ts triggerRefreshForDirect(true) @ ${now}`)
       }
     }, interval * 1000)
   }

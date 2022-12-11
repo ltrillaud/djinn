@@ -118,6 +118,9 @@ export class WeatherComponent implements OnInit {
         const sliceDt = sliceDate.getTime() / 1000
         const slice: Slice = { hour: sliceDate.getHours() }
         slice.forecast = this.weather?.list.find(item => item.dt === sliceDt)
+        if (slice.forecast?.weather[0].description) {
+          slice.forecast.weather[0].description = slice.forecast?.weather[0].description.replace('partiellement', 'partiel.')
+        }
         day.slices.push(slice)
       }
       this.weather.days.push(day)
