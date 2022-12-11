@@ -32,5 +32,9 @@ export class TemperatureComponent implements OnInit {
     Object.keys(this.appliances).map((key) => {
       this.appliancesService.fetchAppliance(key)
     })
+    Object.keys(this.groups).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
+
   }
 }

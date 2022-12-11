@@ -15,7 +15,7 @@
   </div>
 
   <mat-toolbar class="mat-elevation-z4">
-    <button mat-menu-item *ngFor="let menu of mainMenus" (click)="onGoto(menu.page)">
+    <button mat-menu-item *ngFor="let menu of shortMenus" (click)="onGoto(menu.page)">
       <mat-icon fontSet="material-symbols-outlined" color="accent">{{menu.icon}}</mat-icon>
       <span>{{menu.label}}</span>
     </button>
@@ -24,7 +24,7 @@
 </div>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item *ngFor="let menu of mainMenus" (click)="onGoto(menu.page)">
+  <button mat-menu-item *ngFor="let menu of fullMenus" (click)="onGoto(menu.page)">
     <mat-icon fontSet="material-symbols-outlined" color="accent">{{menu.icon}}</mat-icon>
     <span>{{menu.label}}</span>
   </button>

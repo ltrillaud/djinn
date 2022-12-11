@@ -85,7 +85,7 @@ export class User {
   providedIn: 'root'
 })
 export class AuthService {
-
+  offlineTokenName = 'offline-token'
   user: User = new User()
 
   isLogin = false
@@ -108,7 +108,7 @@ export class AuthService {
   }
 
   async login() {
-    const offlineToken = localStorage.getItem('offline-token')
+    const offlineToken = localStorage.getItem(this.offlineTokenName)
     if (offlineToken) { // try to login with offline-token
       const authConfig = this.ssoService.ssoConfig
       this.user = await this.keycloakRefresh(authConfig, offlineToken)
@@ -223,6 +223,7 @@ export class AuthService {
     const user = this.user
     this.user = new User()
     this.isLogin = false
+    localStorage.removeItem(this.offlineTokenName)
     this.onLogin.next({ action: 'logout', user })
   }
 
@@ -276,7 +277,7 @@ export class AuthService {
     console.log(`        authServ.ts triggerRefreshForDirect arm interval(${interval}) secs`)
     this.intervalHandle = setInterval(async () => {
       try {
-        const offlineToken = localStorage.getItem('offline-token')
+        const offlineToken = localStorage.getItem(this.offlineTokenName)
         this.user = await this.keycloakRefresh(this.user.authConfig!, offlineToken!)
         this.onLogin.next({ action: 'refresh', user: this.user })
       } catch (error) {
@@ -305,7 +306,7 @@ export class AuthService {
       const authOutput = await this.httpClient.post<IAuthOutput>(url, body).toPromise()
       console.log(`        authServ.ts keycloakAuthenticate authOutput`, authOutput)
       if (authOutput?.refresh_token) {
-        localStorage.setItem('offline-token', authOutput.refresh_token)
+        localStorage.setItem(this.offlineTokenName, authOutput.refresh_token)
       }
       user = await this.result2user(login, authOutput)
     } catch (error) {

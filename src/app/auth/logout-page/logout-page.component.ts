@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
+import { AuthService } from '../auth.service'
+
 @Component({
   selector: 'app-logout-page',
   templateUrl: './logout-page.component.html',
@@ -14,6 +16,7 @@ export class LogoutPageComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private authService: AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -23,6 +26,7 @@ export class LogoutPageComponent implements OnInit {
     this.subTitle = routeData.subTitle
     this.version = routeData.version
     this.redirect = routeData.redirect
+    this.authService.askLogout()
     console.log(`  logoutPageComp.ts ngOnInit redirect(${this.redirect})`)
   }
 }

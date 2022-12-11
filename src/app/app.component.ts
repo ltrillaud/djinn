@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
 import { environment } from '../environments/environment'
-import { AppliancesService } from './appliances.service'
 
 @Component({
   selector: 'app-root',
@@ -9,11 +8,11 @@ import { AppliancesService } from './appliances.service'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  mainMenus = environment.mainMenus
+  fullMenus = environment.mainMenus
+  shortMenus = environment.mainMenus.filter(menu => menu.page !== 'logout')
 
   constructor(
     private router: Router,
-    private appliancesService: AppliancesService,
   ) { }
 
   onGoto(page: string) {
