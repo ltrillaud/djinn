@@ -57,7 +57,7 @@ interface Weather {
 export class WeatherComponent implements OnInit {
   math = Math
   weather?: Weather
-  applianceIds: string[] = ['G1']
+  applianceIds: string[] = ['G1', 'X1']
   appliances: Appliances = {}
   parseFloat = parseFloat
 
@@ -74,6 +74,11 @@ export class WeatherComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
+    // then update the appliances
+    Object.keys(this.appliances).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
+
     const url = `${environment.owServerHost}/weather/`
     // const url = '/assets/response.json'
     this.weather = await firstValueFrom(this.httpClient.get<Weather>(url))

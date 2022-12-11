@@ -8,6 +8,7 @@ import { KeycloakService } from 'keycloak-angular'
 import { KJUR } from 'jsrsasign'
 
 import { ISsoConfig, SsoService } from './sso.service'
+import { c } from '../console'
 
 
 export const SERVICE_PROVIDER_NAME_TOKEN = new InjectionToken('SERVICE_PROVIDER_NAME')
@@ -47,7 +48,6 @@ export class User {
   appIdSelected?: string
   accessPayload?: IJwtPayload
   refreshPayload?: IJwtPayload
-  offlinePayload?: IJwtPayload
 
   get jwt(): string {
     return this.authOutput?.access_token || ''
@@ -64,10 +64,10 @@ export class User {
     public authOutput?: IAuthOutput,
     public authConfig?: ISsoConfig,
   ) {
-    this.refreshTokens(this.authOutput?.access_token, this.authOutput?.refresh_token, this.authOutput?.id_token)
+    this.refreshTokens(this.authOutput?.access_token, this.authOutput?.refresh_token)
   }
 
-  refreshTokens(accessToken?: string, refreshToken?: string, offlineToken?: string) {
+  refreshTokens(accessToken?: string, refreshToken?: string) {
     if (accessToken) {
       this.authOutput!.access_token = accessToken
       const parts = accessToken.split('.')
@@ -77,11 +77,6 @@ export class User {
       this.authOutput!.refresh_token = refreshToken
       const parts = refreshToken.split('.')
       this.refreshPayload = KJUR.jws.JWS.readSafeJSONString(b64ToUtf8(parts[1])) as IJwtPayload
-    }
-    if (offlineToken) {
-      this.authOutput!.id_token = offlineToken
-      const parts = offlineToken.split('.')
-      this.offlinePayload = KJUR.jws.JWS.readSafeJSONString(b64ToUtf8(parts[1])) as IJwtPayload
     }
   }
 }
@@ -112,8 +107,25 @@ export class AuthService {
     this.redirectUrl = ''
   }
 
-  async login(login: string, password: string): Promise<void> {
+  async login() {
+    const offlineToken = localStorage.getItem('offline-token')
+    if (offlineToken) { // try to login with offline-token
+      const authConfig = this.ssoService.ssoConfig
+      this.user = await this.keycloakRefresh(authConfig, offlineToken)
+      if (this.user.id !== 'anonymous') {
+        this.triggerRefreshForDirect()
+        await this.finishLogin()
+        this.router.navigate([this.redirectUrl])
+      } else {
+        console.log(c(this), `login by offline-token failed`)
+        this.router.navigate(['/login'])
+      }
+    } else { // never login before -> redirect to login page
+      this.router.navigate(['/login'])
+    }
+  }
 
+  async challengeLogin(login: string, password: string): Promise<void> {
     const authConfig = this.ssoService.ssoConfig
     this.user = await this.keycloakAuthenticate(authConfig, login, password)
 
@@ -234,7 +246,7 @@ export class AuthService {
     }, delay);
   }
 
-  triggerRefreshForKeycloak(): void {
+  triggerRefreshForOid(): void {
     // setup auto jwt refresh
     const interval = this.user.authOutput!.refresh_expires_in || 60
     console.log(`        authServ.ts triggerRefreshForKeycloak arm interval(${interval}) secs`)
@@ -246,15 +258,32 @@ export class AuthService {
         // update user and notify
         const keycloakInstance = this.keycloakService.getKeycloakInstance()
         const accessToken = keycloakInstance.token
-        const offlineToken = keycloakInstance.idToken
         const refreshToken = keycloakInstance.refreshToken
-        this.user.refreshTokens(accessToken, refreshToken, offlineToken)
+        this.user.refreshTokens(accessToken, refreshToken)
         this.onLogin.next({ action: 'refresh', user: this.user })
       } catch (error) {
         console.log(`        authServ.ts triggerRefreshForKeycloak failed`, error)
       } finally {
         const now = new Date().toISOString()
         console.log(`        authServ.ts triggerRefreshForKeycloak(${updateResult}) @ ${now}`)
+      }
+    }, interval * 1000)
+  }
+
+  triggerRefreshForDirect(): void {
+    // setup auto jwt refresh
+    const interval = this.user.authOutput!.expires_in || 60
+    console.log(`        authServ.ts triggerRefreshForKeycloak arm interval(${interval}) secs`)
+    this.intervalHandle = setInterval(async () => {
+      try {
+        const offlineToken = localStorage.getItem('offline-token')
+        this.keycloakRefresh(this.user.authConfig!, offlineToken!)
+        this.onLogin.next({ action: 'refresh', user: this.user })
+      } catch (error) {
+        console.log(`        authServ.ts triggerRefreshForKeycloak failed`, error)
+      } finally {
+        const now = new Date().toISOString()
+        console.log(`        authServ.ts triggerRefreshForKeycloak(true) @ ${now}`)
       }
     }, interval * 1000)
   }
@@ -275,7 +304,32 @@ export class AuthService {
       // this angular prototype will auto setup content-type in x-www-form-urlencoded
       const authOutput = await this.httpClient.post<IAuthOutput>(url, body).toPromise()
       console.log(`        authServ.ts keycloakAuthenticate authOutput`, authOutput)
+      if (authOutput?.refresh_token) {
+        localStorage.setItem('offline-token', authOutput.refresh_token)
+      }
       user = await this.result2user(login, authOutput)
+    } catch (error) {
+      console.log(`        authServ.ts request failed error`, error)
+    }
+    return user
+  }
+
+  private async keycloakRefresh(authConfig: ISsoConfig, offlineToken: string): Promise<User> {
+    const host = authConfig.armorialHost || location.origin.replace(/https:\/\/[^.]*.(.*)$/, `https://auth.$1`)
+    const url = `${host}/realms/${authConfig.realm}/protocol/openid-connect/token`
+    console.log(`        authServ.ts keycloakAuthenticate requesting ${url} ...`)
+    let user = new User()
+    try {
+      // prepare the request for an application/x-www-form-urlencoded;charset=UTF-8
+      const body = new HttpParams()
+        .set('grant_type', 'refresh_token')
+        .set('client_id', authConfig.clientId)
+        .set('refresh_token', offlineToken)
+
+      // this angular prototype will auto setup content-type in x-www-form-urlencoded
+      const authOutput = await this.httpClient.post<IAuthOutput>(url, body).toPromise()
+      console.log(`        authServ.ts keycloakRefresh authOutput`, authOutput)
+      user = await this.result2user('', authOutput)
     } catch (error) {
       console.log(`        authServ.ts request failed error`, error)
     }

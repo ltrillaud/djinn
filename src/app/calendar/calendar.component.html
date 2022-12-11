@@ -1,16 +1,27 @@
 <div id="holder" fxLayout="column" fxLayoutAlign="start center" fxFlexFill fxLayoutGap="16px">
-  <div fxLayout="row" class="">
-    <h2 [ngPlural]="appliancesService.favoriteIds.length" fxFlex>
-      <ng-template ngPluralCase="0">Pas d'événement</ng-template>
-      <ng-template ngPluralCase="1">Événement</ng-template>
-      <ng-template ngPluralCase="other">Événements</ng-template>
-    </h2>
 
-  </div>
+  <mat-list>
+    <mat-list-item *ngFor="let item of crons | async | keyvalue: unsorted" class="mat-elevation-z2">
 
-  <p>line1</p>
-  <p>line2</p>
+      <div matLine class="line1">
+        <button mat-icon-button color="accent"
+          (click)="onEdit(item.key)">
+          <mat-icon fontSet="material-symbols-outlined">edit</mat-icon>
+        </button>
+        <div fxFlex>
+          <div class="left" fxLayout="column" fxLayoutAlign="center stretch">
+            <div>{{item.key}}</div>
+          </div>
+          <div fxFlex></div>
+
+
+        </div>
+      </div>
+
+    </mat-list-item>
+  </mat-list>
 </div>
+
 <button id="add" mat-mini-fab (click)="onAdd()" color="accent">
   <mat-icon fontSet="material-symbols-outlined">calendar_add_on</mat-icon>
 </button>

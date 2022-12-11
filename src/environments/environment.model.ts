@@ -23,7 +23,7 @@ export const defaultEnvironment: Environment = {
   production: true,
   version: pack.version,
   serviceProviderName: 'djinn',
-  bypassSsoConfig: '',
+  bypassSsoConfig: 'direct',
   bypassSsoDomain: '',
   owServerHost: 'https://owfs.trillaud.com',
   mainMenus: [

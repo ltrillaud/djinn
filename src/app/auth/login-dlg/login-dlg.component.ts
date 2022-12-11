@@ -38,7 +38,7 @@ export class LoginDlgComponent implements OnInit {
     if (this.username && this.password) {
       // try auto-connect if information provided 
       console.log(`    loginDlgComp.ts authService automatic challenging ...`)
-      await this.authService.login(this.username, this.password)
+      await this.authService.challengeLogin(this.username, this.password)
       if (this.authService.user.isAuthenticated) {
         console.log(`    loginDlgComp.ts authService automatic challenging ok => redirect`)
         this.gotoRedirect()
@@ -52,7 +52,7 @@ export class LoginDlgComponent implements OnInit {
     this.message = `Authentification en cours ...`
     this.loading = true
 
-    this.authService.login(this.model.login, this.model.password).then(() => {
+    this.authService.challengeLogin(this.model.login, this.model.password).then(() => {
       console.log(`    loginDlgComp.ts authService manuel challenge`)
       this.loading = false
       this.message = ''

@@ -1,5 +1,8 @@
-<h2>Quoi ?</h2>
-<h2>Quand ?</h2>
+<div *ngIf="cron$ | async as cron">
+  <h2>Quoi ?</h2>
+  <h2>Quand ?</h2>
+</div>
+
 
 <button id="save" mat-mini-fab (click)="onSave()" color="accent">
   <mat-icon fontSet="material-symbols-outlined">save</mat-icon>

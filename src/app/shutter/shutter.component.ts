@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { Appliances } from '../appliances.model'
 import { AppliancesService } from '../appliances.service'
 
@@ -7,7 +7,7 @@ import { AppliancesService } from '../appliances.service'
   templateUrl: './shutter.component.html',
   styleUrls: ['./shutter.component.scss']
 })
-export class ShutterComponent {
+export class ShutterComponent implements OnInit {
   applianceIds: string[] = ['UR', 'CR', 'SR', 'JRP', 'JRS', 'JRE', 'PR', 'MR', 'AR']
   groupsIds: string[] = ['boulot', 'reveil', 'etage']
   appliances: Appliances = {}
@@ -27,4 +27,10 @@ export class ShutterComponent {
     }
   }
 
+  ngOnInit(): void {
+    // then update the appliances
+    Object.keys(this.appliances).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
+  }
 }

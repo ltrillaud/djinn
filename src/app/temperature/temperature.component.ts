@@ -7,7 +7,7 @@ import { AppliancesService } from '../appliances.service'
   templateUrl: './temperature.component.html',
   styleUrls: ['./temperature.component.scss']
 })
-export class TemperatureComponent {
+export class TemperatureComponent implements OnInit {
   applianceIds: string[] = ['J1P', 'C1P', 'U1', /*'P1',*/ 'M1', 'A1', 'B1', 'X1', 'R1', 'H1']
   groupsIds: string[] = ['livingRoom', 'haut']
   appliances: Appliances = {}
@@ -27,4 +27,10 @@ export class TemperatureComponent {
     }
   }
 
+  ngOnInit(): void {
+    // then update the appliances
+    Object.keys(this.appliances).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
+  }
 }

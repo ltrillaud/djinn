@@ -49,7 +49,7 @@ export class AuthGuard implements CanActivate {
       )
 
       // get the config
-      this.authService.triggerRefreshForKeycloak()
+      this.authService.triggerRefreshForOid()
       this.authService.triggerLogout()
       await this.authService.finishLogin()
       isAllowed = true
@@ -60,8 +60,8 @@ export class AuthGuard implements CanActivate {
 
       // Navigate to the login page with extras
       const ssoAuth = this.ssoService.ssoConfig
+      const redirectUri = window.location.origin + state.url
       if (ssoAuth.ssoType === 'oid') {
-        const redirectUri = window.location.origin + state.url
         console.log(`       authGuard.ts redirectUri(${redirectUri})`)
         try {
           await this.keycloakService.login({ redirectUri })
@@ -72,7 +72,7 @@ export class AuthGuard implements CanActivate {
         console.log(`       authGuard.ts url(${state.url}) ssoAuth(${this.ssoService.ssoConfigName}) ` +
           `type(${ssoAuth.ssoType}) redirect to login`
         )
-        this.router.navigate(['/login'])
+        await this.authService.login()
       }
       isAllowed = false
     }

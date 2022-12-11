@@ -29,7 +29,5 @@ export class AppliancesComponent implements OnChanges {
     this.appliances[applianceKey].mode = mode
   }
 
-
   unsorted(): number { return 0 }
-
 }

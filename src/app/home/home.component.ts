@@ -8,10 +8,16 @@ import { AppliancesService } from '../appliances.service'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   constructor(
     public appliancesService: AppliancesService,
   ) { }
 
+  ngOnInit(): void {
+    // then update the appliances
+    Object.keys(this.appliancesService.favoriteAppliances).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
+  }
 }

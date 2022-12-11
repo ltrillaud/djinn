@@ -25,31 +25,6 @@ export class AppliancesService {
     this.buildFavoriteAppliances()
     console.log(c(this), `favorites`, this.favoriteIds)
 
-    this.authService.onLogin$.subscribe(next => {
-      if (next.action === 'login') {
-        // if (false) {
-        // first update favorite in appliances
-        for (const id of this.favoriteIds) {
-          this.appliances[id].isFavorite = true
-          this.fetchAppliance(id).then(() => {
-            console.log(c(this), `constructor fetchAppliance(${id}) ok`)
-          }).catch(error => {
-            console.log(c(this), `constructor fetchAppliance(${id}) ko`, error)
-          })
-        }
-
-        // then update the other appliances
-        Object.keys(this.appliances).filter(
-          (key) => !this.favoriteIds.includes(key)
-        ).map((key) => {
-          this.fetchAppliance(key).then(() => {
-            console.log(c(this), `constructor fetchAppliance(${key}) ok`)
-          }).catch(error => {
-            console.log(c(this), `constructor fetchAppliance(${key}) ko`, error)
-          })
-        })
-      }
-    })
   }
 
   pushFavorite(id: string) {
@@ -115,7 +90,7 @@ export class AppliancesService {
     }
   }
 
-  private async fetchAppliance(id: string): Promise<void> {
+  public async fetchAppliance(id: string): Promise<void> {
     const appliance = this.appliances[id]
     for (const aplId of this.appliances[id].aplIds) {
       const url = `${environment.owServerHost}/apl/${aplId}`

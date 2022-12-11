@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'calendar', canActivate: [AuthGuard], children: [
       { path: '', component: CalendarComponent, canActivate: [AuthGuard] },
-      { path: 'edit', component: EditComponent, canActivate: [AuthGuard] },
+      { path: ':id', component: EditComponent, canActivate: [AuthGuard] },
     ]
   },
   { path: 'linky', component: LinkyComponent, canActivate: [AuthGuard] },

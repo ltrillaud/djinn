@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
+import { Observable } from 'rxjs'
+import { c } from 'src/app/console'
+import { CalendarService, Cron } from '../calendar.service'
 
 @Component({
   selector: 'app-edit',
@@ -7,10 +10,18 @@ import { Router } from '@angular/router'
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
+  id: string
+  cron$: Observable<Cron>
 
   constructor(
     private router: Router,
-  ) { }
+    private activatedRoute: ActivatedRoute,
+    private calendarService: CalendarService,
+  ) {
+    this.id = this.activatedRoute.snapshot.paramMap.get('id') || 'edit'
+    console.log(c(this), `constructor route id(${this.id})`)
+    this.cron$ = this.calendarService.getCron(this.id)
+  }
 
   ngOnInit(): void {
   }

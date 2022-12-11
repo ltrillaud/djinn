@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core'
 import { Appliances } from '../appliances.model'
 import { AppliancesService } from '../appliances.service'
+import { c } from '../console'
 
 @Component({
   selector: 'app-heater',
   templateUrl: './heater.component.html',
   styleUrls: ['./heater.component.scss']
 })
-export class HeaterComponent {
+export class HeaterComponent implements OnInit {
   applianceIds: string[] = ['S', 'P', 'M', 'A', 'R']
   appliances: Appliances = {}
 
@@ -20,5 +21,12 @@ export class HeaterComponent {
         this.appliances[key] = appliance
       }
     }
+  }
+
+  ngOnInit(): void {
+    // then update the appliances
+    Object.keys(this.appliances).map((key) => {
+      this.appliancesService.fetchAppliance(key)
+    })
   }
 }
