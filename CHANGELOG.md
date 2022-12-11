@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ltrillaud/djinn/compare/v1.1.0...v1.2.0) (2022-12-11)
+
+
+### Features
+
+* **app:** add weather page ([bf1c0d8](https://github.com/ltrillaud/djinn/commit/bf1c0d82771d35a0e444cbb69bede4dc38dc47c4))
+* **auth:** refactor with offline tokens ([0e87628](https://github.com/ltrillaud/djinn/commit/0e876283309d7305cda93974e740305f5d211029))
+
+
+### Bug Fixes
+
+* **weather:** better layout ([ab436dc](https://github.com/ltrillaud/djinn/commit/ab436dc0a94ee11e2b2188d43ea257b8f5e430ac))
+
 ## [1.1.0](https://github.com/ltrillaud/djinn/compare/v1.0.3...v1.1.0) (2022-11-13)
 
 
