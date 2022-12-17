@@ -130,7 +130,6 @@ export class AuthService {
     this.user = await this.keycloakAuthenticate(authConfig, login, password)
 
     if (this.user.id !== 'anonymous') {
-      this.triggerLogout()
       await this.finishLogin()
     }
   }
