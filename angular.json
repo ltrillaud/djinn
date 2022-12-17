@@ -72,6 +72,7 @@
             },
             "development": {
               "host": "0.0.0.0",
+              "port": 4210,
               "headers": {
                 "Content-Security-Policy": "script-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://gravatar.com; media-src 'self'; object-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-ancestors 'self' https://auth.trillaud.com;",
                 "X-Frame-Options": "https://auth.trillaud.com"

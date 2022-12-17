@@ -8,6 +8,7 @@ import { environment } from '../environments/environment'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  version = environment.version
   fullMenus = environment.mainMenus
   shortMenus = environment.mainMenus.filter(menu => menu.page !== 'logout')
 
